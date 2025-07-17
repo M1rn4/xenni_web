@@ -19,7 +19,7 @@ export default function BootcampsPage() {
       duration: "16 semanas",
       level: "Intermedio",
       students: 120,
-      nextStart: "15 Feb 2024",
+      nextStart: "15 Set 2024",
       technologies: ["Solidity", "React", "Web3.js", "IPFS"],
       color: "from-purple-500 to-pink-500",
       icon: "🔗",

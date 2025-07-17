@@ -20,7 +20,7 @@ export default function Navbar() {
     { name: "Comunidad", href: "/comunidad" },
     { name: "Xenni Lives", href: "/xenni-lives" },
     { name: "Recursos", href: "/recursos" },
-    { name: "Bootcamp", href: "/bootcamp" },
+    { name: "Bootcamp", href: "/bootcamps" },
     { name: "Sobre", href: "/sobre" },
   ]
 

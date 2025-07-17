@@ -20,6 +20,7 @@ export default function Navbar() {
     { name: "Comunidad", href: "/comunidad" },
     { name: "Xenni Lives", href: "/xenni-lives" },
     { name: "Recursos", href: "/recursos" },
+    { name: "Bootcamp", href: "/bootcamp" },
     { name: "Sobre", href: "/sobre" },
   ]
 
@@ -96,7 +97,7 @@ export default function Navbar() {
                 Aplicar
               </Link>
               <a
-                href='https://xenni.sanity.studio'
+                href="https://xenni.sanity.studio"
                 className="block mx-3 mt-2 text-center text-neutral-700 hover:text-[#002F6C] font-semibold"
                 target="_blank"
                 rel="noopener noreferrer"

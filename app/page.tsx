@@ -93,7 +93,7 @@ export default function HomePage() {
 
   const upcomingEvents = [
     {
-      date: "Marzo 15, 2025",
+      date: "Setiembre 15, 2025",
       title: "Xenni Bootcamp: Web3 & Blockchain Intensivo",
       description: "6 semanas construyendo el futuro descentralizado",
       status: "Inscripciones abiertas",

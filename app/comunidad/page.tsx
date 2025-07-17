@@ -3,9 +3,9 @@ import { Users, MessageCircle, Calendar, Globe, ArrowRight, Heart } from "lucide
 
 export default function ComunidadPage() {
   const communityStats = [
-    { number: "500+", label: "Builders activos", icon: Users },
-    { number: "15", label: "Países", icon: Globe },
-    { number: "50+", label: "Eventos mensuales", icon: Calendar },
+    { number: "5+", label: "Paises", icon: Users },
+    { number: "1", label: "Comunidad en Expansión", icon: Globe },
+    { number: "100%", label: "Equipo Tech", icon: Calendar },
     { number: "24/7", label: "Soporte comunidad", icon: MessageCircle },
   ]
 
@@ -141,7 +141,7 @@ export default function ComunidadPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-white">
+      {/* <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl md:text-5xl font-bold text-[#002F6C] mb-6">Historias de éxito</h2>
@@ -175,7 +175,7 @@ export default function ComunidadPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 cosmic-bg text-white">

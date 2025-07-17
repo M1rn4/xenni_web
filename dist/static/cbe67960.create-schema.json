@@ -1,0 +1,614 @@
+[
+  {
+    "of": [
+      {
+        "marks": {
+          "annotations": [
+            {
+              "i18nTitleKey": "inputs.portable-text.annotation.link",
+              "options": {
+                "modal": {
+                  "type": "popover"
+                }
+              },
+              "fields": [
+                {
+                  "validation": [
+                    {
+                      "rules": [
+                        {
+                          "flag": "uri",
+                          "constraint": {
+                            "options": {
+                              "scheme": [
+                                "/^http$/",
+                                "/^https$/",
+                                "/^tel$/",
+                                "/^mailto$/"
+                              ],
+                              "allowRelative": true,
+                              "relativeOnly": false,
+                              "allowCredentials": false
+                            }
+                          }
+                        }
+                      ],
+                      "level": "error"
+                    }
+                  ],
+                  "description": "A valid web, email, phone, or relative link.",
+                  "name": "href",
+                  "type": "url",
+                  "title": "Link"
+                }
+              ],
+              "name": "link",
+              "type": "object"
+            }
+          ],
+          "decorators": [
+            {
+              "value": "strong",
+              "title": "Strong"
+            },
+            {
+              "value": "em",
+              "title": "Italic"
+            },
+            {
+              "value": "code",
+              "title": "Code"
+            },
+            {
+              "value": "underline",
+              "title": "Underline"
+            },
+            {
+              "value": "strike-through",
+              "title": "Strike"
+            }
+          ]
+        },
+        "lists": [
+          {
+            "value": "bullet",
+            "title": "Bulleted list"
+          },
+          {
+            "value": "number",
+            "title": "Numbered list"
+          }
+        ],
+        "styles": [
+          {
+            "value": "normal",
+            "title": "Normal"
+          },
+          {
+            "value": "h1",
+            "title": "Heading 1"
+          },
+          {
+            "value": "h2",
+            "title": "Heading 2"
+          },
+          {
+            "value": "h3",
+            "title": "Heading 3"
+          },
+          {
+            "value": "h4",
+            "title": "Heading 4"
+          },
+          {
+            "value": "h5",
+            "title": "Heading 5"
+          },
+          {
+            "value": "h6",
+            "title": "Heading 6"
+          },
+          {
+            "value": "blockquote",
+            "title": "Quote"
+          }
+        ],
+        "of": [],
+        "type": "block"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "type": "image"
+      }
+    ],
+    "name": "blockContent",
+    "type": "array"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string",
+        "title": "Título"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "title": "Descripción"
+      },
+      {
+        "name": "date",
+        "type": "datetime",
+        "title": "Fecha"
+      },
+      {
+        "name": "speaker",
+        "type": "string",
+        "title": "Ponente"
+      },
+      {
+        "name": "speakerRole",
+        "type": "string",
+        "title": "Rol del ponente"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "speakerImage",
+        "type": "image",
+        "title": "Imagen del ponente"
+      },
+      {
+        "name": "registered",
+        "type": "number",
+        "title": "Nº de registrados"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "registrationUrl",
+        "type": "url",
+        "title": "Enlace de inscripción"
+      },
+      {
+        "name": "duration",
+        "type": "number",
+        "title": "Duración (en minutos)"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "tags",
+        "type": "array",
+        "title": "Etiquetas"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "videoUrl",
+        "type": "url",
+        "title": "Enlace del video (grabación)"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "thumbnail",
+        "type": "image",
+        "title": "Miniatura del evento"
+      },
+      {
+        "name": "views",
+        "type": "number",
+        "title": "Número de vistas (solo eventos pasados)"
+      },
+      {
+        "name": "rating",
+        "type": "number",
+        "title": "Calificación del evento (opcional)"
+      },
+      {
+        "name": "isUpcoming",
+        "type": "boolean",
+        "title": "¿Es un evento próximo?"
+      }
+    ],
+    "name": "xenniLive",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string",
+        "title": "Título"
+      },
+      {
+        "name": "shortDescription",
+        "type": "text",
+        "title": "Descripción corta"
+      },
+      {
+        "options": {
+          "list": [
+            "Web3",
+            "IA",
+            "IoT",
+            "Ciberseguridad"
+          ],
+          "layout": "dropdown"
+        },
+        "name": "mainCategory",
+        "type": "string",
+        "title": "Categoría temática"
+      },
+      {
+        "options": {
+          "list": [
+            "Guía",
+            "Curso",
+            "Tutorial",
+            "E-book",
+            "Video",
+            "Whitepaper"
+          ],
+          "layout": "dropdown"
+        },
+        "name": "type",
+        "type": "string",
+        "title": "Tipo de recurso"
+      },
+      {
+        "description": "Puedes usar un nombre de ícono (ej. Heroicons) o un emoji",
+        "name": "icon",
+        "type": "string",
+        "title": "Ícono del recurso"
+      },
+      {
+        "options": {
+          "hotspot": true
+        },
+        "name": "coverImage",
+        "type": "image",
+        "title": "Imagen de portada (opcional)"
+      },
+      {
+        "description": "Si está en la web, se mostrará el contenido completo en la página interna.",
+        "name": "internalContent",
+        "type": "boolean",
+        "title": "¿El contenido está en la web?"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "slug",
+        "type": "slug"
+      },
+      {
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "uri",
+                "constraint": {
+                  "options": {
+                    "scheme": [
+                      "/^http$/",
+                      "/^https$/"
+                    ],
+                    "allowRelative": false,
+                    "relativeOnly": false,
+                    "allowCredentials": false
+                  }
+                }
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "hidden": "conditional",
+        "name": "externalUrl",
+        "type": "url",
+        "title": "Enlace externo"
+      },
+      {
+        "hidden": "conditional",
+        "name": "body",
+        "type": "blockContent",
+        "title": "Contenido del recurso"
+      }
+    ],
+    "name": "resource",
+    "type": "document",
+    "title": "Recurso"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string",
+        "title": "Título del Bootcamp"
+      },
+      {
+        "options": {
+          "source": "title",
+          "maxLength": 96
+        },
+        "validation": [
+          {
+            "rules": [
+              {
+                "flag": "custom"
+              }
+            ],
+            "level": "error"
+          }
+        ],
+        "name": "slug",
+        "type": "slug",
+        "title": "Slug (URL)"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "title": "Descripción"
+      },
+      {
+        "name": "duration",
+        "type": "string",
+        "title": "Duración"
+      },
+      {
+        "name": "modality",
+        "type": "string",
+        "title": "Modalidad"
+      },
+      {
+        "name": "certificate",
+        "type": "string",
+        "title": "Certificado"
+      },
+      {
+        "name": "price",
+        "type": "string",
+        "title": "Precio"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "includes",
+        "type": "array",
+        "title": "Incluye"
+      },
+      {
+        "name": "nextStart",
+        "type": "string",
+        "title": "Próximo Inicio"
+      },
+      {
+        "name": "level",
+        "type": "string",
+        "title": "Nivel"
+      },
+      {
+        "name": "students",
+        "type": "number",
+        "title": "Número de Estudiantes"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "technologies",
+        "type": "array",
+        "title": "Tecnologías"
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "title": "Color de fondo (Tailwind)"
+      },
+      {
+        "name": "icon",
+        "type": "string",
+        "title": "Ícono (Emoji)"
+      },
+      {
+        "of": [
+          {
+            "type": "workshop"
+          }
+        ],
+        "name": "workshops",
+        "type": "array"
+      },
+      {
+        "of": [
+          {
+            "type": "bootcampStage",
+            "title": "Etapa del Bootcamp"
+          }
+        ],
+        "name": "syllabus",
+        "type": "array",
+        "title": "Plan de Estudios (Syllabus)"
+      },
+      {
+        "of": [
+          {
+            "type": "instructor"
+          }
+        ],
+        "name": "instructors",
+        "type": "array",
+        "title": "Instructores"
+      },
+      {
+        "of": [
+          {
+            "type": "faqItem",
+            "title": "Pregunta Frecuente"
+          }
+        ],
+        "name": "faqs",
+        "type": "array",
+        "title": "Preguntas Frecuentes"
+      }
+    ],
+    "name": "bootcamp",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string",
+        "title": "Título"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "title": "Descripción"
+      },
+      {
+        "name": "image",
+        "type": "image",
+        "title": "Imagen"
+      }
+    ],
+    "name": "workshop",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string",
+        "title": "Título"
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "title": "Descripción"
+      },
+      {
+        "of": [
+          {
+            "type": "string"
+          }
+        ],
+        "name": "sessions",
+        "type": "array",
+        "title": "Sesiones"
+      }
+    ],
+    "name": "bootcampStage",
+    "type": "object",
+    "title": "Etapa del Bootcamp"
+  },
+  {
+    "fields": [
+      {
+        "name": "name",
+        "type": "string",
+        "title": "Nombre"
+      },
+      {
+        "name": "role",
+        "type": "string",
+        "title": "Rol"
+      },
+      {
+        "name": "bio",
+        "type": "text",
+        "title": "Biografía"
+      },
+      {
+        "name": "photo",
+        "type": "image",
+        "title": "Foto"
+      }
+    ],
+    "name": "instructor",
+    "type": "document"
+  },
+  {
+    "fields": [
+      {
+        "name": "question",
+        "type": "string",
+        "title": "Pregunta"
+      },
+      {
+        "name": "answer",
+        "type": "text",
+        "title": "Respuesta"
+      }
+    ],
+    "name": "faqItem",
+    "type": "object",
+    "title": "Pregunta Frecuente"
+  }
+]

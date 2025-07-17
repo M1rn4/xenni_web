@@ -1,15 +1,15 @@
 import Link from "next/link"
-import { Github, Twitter, Linkedin, Youtube, Mail, MapPin } from "lucide-react"
+import { Github, Twitter, Linkedin, Youtube, Mail, MapPin, Instagram } from "lucide-react"
 import Image from "next/image" // Asegúrate de tener esto arriba
 
 
 export default function Footer() {
   const socialLinks = [
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Youtube, href: "#", label: "YouTube" },
-  ]
+  { icon: Twitter, href: "https://x.com/xenni_xyz", label: "Twitter", target: "_blank", rel: "noopener noreferrer" },
+  { icon: Linkedin, href: "https://www.linkedin.com/company/xenni", label: "LinkedIn", target: "_blank", rel: "noopener noreferrer" },
+  { icon: Instagram, href: "https://www.instagram.com/xenni.xyz/", label: "GitHub", target: "_blank", rel: "noopener noreferrer" },
+  { icon: Youtube, href: "https://www.youtube.com/channel/UCf2tTr-EMEuC3_uifm8diLg", label: "YouTube", target: "_blank", rel: "noopener noreferrer" },
+]
 
   const footerSections = [
     {

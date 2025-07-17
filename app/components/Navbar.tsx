@@ -2,25 +2,21 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Zap } from "lucide-react"
-import Image from "next/image" // 👈 nuevo import
-
+import { Menu, X } from "lucide-react"
+import Image from "next/image"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
-    }
+    const handleScroll = () => setIsScrolled(window.scrollY > 20)
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
   const navItems = [
     { name: "Inicio", href: "/" },
-    { name: "Bootcamps", href: "/bootcamps" },
     { name: "Comunidad", href: "/comunidad" },
     { name: "Xenni Lives", href: "/xenni-lives" },
     { name: "Recursos", href: "/recursos" },
@@ -28,16 +24,13 @@ export default function Navbar() {
   ]
 
   return (
-    <nav
-      className={`fixed top-0 w-full z-50 transition-all duration-500 ${
-        isScrolled
-          ? "bg-white/95 backdrop-blur-xl border-b border-neutral-200/50 shadow-lg shadow-neutral-900/5"
-          : "bg-transparent"
-      }`}
-    >
+    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+      isScrolled
+        ? "bg-white/95 backdrop-blur-xl border-b border-neutral-200/50 shadow-lg shadow-neutral-900/5"
+        : "bg-transparent"
+    }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <Link href="/" className="flex items-center space-x-2 group">
             <Image
               src="/xenni_logo_white.png"
@@ -48,8 +41,6 @@ export default function Navbar() {
             />
           </Link>
 
-
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <Link
@@ -64,15 +55,16 @@ export default function Navbar() {
             <Link href="/aplicar" className="btn-primary">
               Aplicar
             </Link>
-            <button className="text-neutral-500 cursor-not-allowed relative group font-semibold">
+            <a
+              href="https://xenni.sanity.studio"
+              className="text-neutral-700 hover:text-[#002F6C] font-semibold transition-colors duration-300"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Login
-              <span className="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-neutral-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                Próximamente
-              </span>
-            </button>
+            </a>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -83,7 +75,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden bg-white/95 backdrop-blur-md border-t border-neutral-200/50">
             <div className="px-2 pt-2 pb-3 space-y-1">
@@ -104,6 +95,14 @@ export default function Navbar() {
               >
                 Aplicar
               </Link>
+              <a
+                href='https://xenni.sanity.studio'
+                className="block mx-3 mt-2 text-center text-neutral-700 hover:text-[#002F6C] font-semibold"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Login
+              </a>
             </div>
           </div>
         )}

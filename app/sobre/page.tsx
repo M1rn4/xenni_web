@@ -1,31 +1,27 @@
+"use client";
+
 import { ArrowRight, Users, Globe, Award, Zap } from "lucide-react"
 import Link from "next/link"
 
 export default function SobrePage() {
   const team = [
     {
-      name: "Alejandra Méndez",
-      role: "CEO & Co-Fundadora",
-      bio: "Ex-CTO de una startup blockchain con más de 10 años de experiencia en tecnología.",
-      avatar: "👩‍💼",
+      name: "Mirna Ampuero",
+      role: "CEO & CTO",
+      bio: "Ingeniera mecatrónica y emprendedora en Web3, sostenibilidad y educación tech.",
+      avatar: "/team/mirna.jpg",
     },
     {
-      name: "Carlos Vega",
-      role: "CTO & Co-Fundador",
-      bio: "Ingeniero de IA con experiencia en Google y Meta. Apasionado por la educación tech.",
-      avatar: "👨‍💻",
+      name: "Michel Anyosa ",
+      role: "Innovation & Strategy Advisor",
+      bio: "MsC y MBA con experiencia en gestión de la innovación, estrategia y emprendimiento.",
+      avatar: "/team/michell.jpeg",
     },
-    {
-      name: "Sofía Ramírez",
-      role: "Directora Académica",
-      bio: "PhD en Ciencias de la Computación con especialidad en ciberseguridad y blockchain.",
-      avatar: "👩‍🏫",
-    },
-    {
-      name: "Miguel Torres",
-      role: "Director de Comunidad",
-      bio: "Construyendo comunidades tech por más de 8 años. Experto en Web3 y ecosistemas descentralizados.",
-      avatar: "👨‍🚀",
+        {
+      name: "Erlich Ampuero",
+      role: "COO",
+      bio: "COO y ganador de MakeX Latam. Apasionado por la tecnología, la robótica",
+      avatar: "/team/erlich.jpeg",
     },
   ]
 
@@ -186,34 +182,54 @@ export default function SobrePage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-display text-4xl font-bold text-[#002F6C] mb-6">Nuestro equipo</h2>
-            <p className="text-xl text-neutral-600 max-w-3xl mx-auto">
-              Conoce a las mentes brillantes detrás de Xenni. Un equipo apasionado por la tecnología y la educación.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="group hover-lift">
-                <div className="bg-neutral-50 rounded-2xl p-8 hover:bg-white hover:shadow-lg transition-all duration-300 border border-neutral-200 hover:border-[#00C2A1]/30 text-center">
-                  <div className="w-24 h-24 bg-gradient-to-br from-[#002F6C]/20 to-[#00C2A1]/20 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:scale-105 transition-transform duration-300">
-                    <span className="text-4xl">{member.avatar}</span>
-                  </div>
-                  <h3 className="font-display text-xl font-bold text-[#002F6C] mb-2">{member.name}</h3>
-                  <p className="text-[#00C2A1] font-medium mb-4">{member.role}</p>
-                  <p className="text-neutral-600">{member.bio}</p>
-                </div>
-              </div>
-            ))}
-          </div>
+      <section className="py-20 bg-white" aria-labelledby="team-heading">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 id="team-heading" className="font-display text-4xl font-bold text-[#002F6C] mb-4">
+            Nuestro equipo
+          </h2>
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto leading-relaxed">
+            Conoce a las mentes detrás de Xenni: personas apasionadas por la tecnología, la educación y el impacto real.
+          </p>
         </div>
-      </section>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {team.map((member, index) => (
+            <div key={index} className="group hover-lift transition-transform duration-300">
+              <div className="bg-neutral-50 rounded-2xl p-8 hover:bg-white hover:shadow-xl transition-all duration-300 border border-neutral-200 hover:border-[#00C2A1]/30 text-center">
+                
+                {member.avatar?.match(/\.(jpeg|jpg|png|webp|gif)$/i) ? (
+                  <div className="w-25 h-25 rounded-3xl overflow-hidden mx-auto mb-6 border-4 border-white shadow-md group-hover:scale-105 transition-transform duration-300">
+                    <img
+                      src={member.avatar}
+                      alt={`Foto de ${member.name}`}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.currentTarget.src = "/team/default.jpg";
+                      }}
+                    />
+                  </div>
+                ) : (
+                  <div className="w-24 h-24 bg-gradient-to-br from-[#002F6C]/20 to-[#00C2A1]/20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl text-[#002F6C] font-bold group-hover:scale-105 transition-transform duration-300">
+                    {member.avatar}
+                  </div>
+                )}
+
+                <h3 className="font-display text-xl font-bold text-[#002F6C] mb-1">
+                  {member.name}
+                </h3>
+                <p className="text-[#00C2A1] font-medium text-sm mb-3">{member.role}</p>
+                <p className="text-neutral-600 text-sm leading-relaxed">{member.bio}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
 
       {/* Partners Section */}
-      <section className="py-20 bg-neutral-50">
+      {/* <section className="py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-display text-4xl font-bold text-[#002F6C] mb-6">Nuestros aliados</h2>
@@ -235,7 +251,7 @@ export default function SobrePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <section className="py-20 cosmic-bg text-white">

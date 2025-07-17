@@ -49,7 +49,7 @@ export default function Web3BootcampPage() {
     certificate: "NFT + Diploma PDF",
     price: "300 USD",
     includes: ["Mentoría personalizada", "Acceso a comunidad", "Recursos adicionales", "Proyectos prácticos"],
-    nextStart: "15 Feb 2024",
+    nextStart: "15 Set 2025",
     level: "Intermedio",
     students: 120,
     technologies: ["Solidity", "React", "Web3.js", "IPFS", "Hardhat", "Ethers.js", "MetaMask", "The Graph"],

@@ -108,7 +108,7 @@ export default function HomePage() {
     },
   ]
 
-  const locations = ["XenniMéxico", "XenniBogotá", "XenniLima", "XenniBuenos", "XenniSantiago"]
+  // const locations = ["XenniMéxico", "XenniBogotá", "XenniLima", "XenniBuenos", "XenniSantiago"]
 
   useEffect(() => {
     const stageInterval = setInterval(() => {
@@ -142,7 +142,7 @@ export default function HomePage() {
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Floating Location Clouds */}
-          {locations.map((location, index) => (
+          {/* {locations.map((location, index) => (
             <div
               key={location}
               className={`absolute floating-cloud animate-float-cloud bg-[#00C2A1]/20 backdrop-blur-sm rounded-full px-6 py-3 text-white font-semibold text-sm border border-[#00C2A1]/30`}
@@ -159,7 +159,7 @@ export default function HomePage() {
                 {location}
               </span>
             </div>
-          ))}
+          ))} */}
 
           {/* Flowing Lines */}
           <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1000 1000">
@@ -533,7 +533,7 @@ export default function HomePage() {
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Floating Community Elements */}
-          {["Builders", "Innovadores", "Creadores", "Visionarios"].map((role, index) => (
+          {/* {["Builders", "Innovadores", "Creadores", "Visionarios"].map((role, index) => (
             <div
               key={role}
               className={`absolute floating-cloud animate-float-cloud bg-[#00C2A1]/20 backdrop-blur-sm rounded-full px-6 py-3 text-white font-semibold text-sm border border-[#00C2A1]/30`}
@@ -548,7 +548,7 @@ export default function HomePage() {
                 {role}
               </span>
             </div>
-          ))}
+          ))} */}
 
           {/* Geometric decorations */}
           <div className="absolute top-20 right-10 w-32 h-32 border-2 border-[#00C2A1]/20 rounded-2xl rotate-45 animate-spin-slow"></div>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X } from "lucide-react"
+import { Menu, X} from "lucide-react"
 import Image from "next/image"
 
 export default function Navbar() {
@@ -57,13 +57,11 @@ export default function Navbar() {
               Aplicar
             </Link>
             <a
-              href="https://xenni.sanity.studio"
-              className="text-neutral-700 hover:text-[#002F6C] font-semibold transition-colors duration-300"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Login
-            </a>
+                href="https://xenni-platform-j26q58zod-mirnas-projects.vercel.app/login"
+                className="block mx-3 mt-2 text-center text-neutral-700 hover:text-[#002F6C] font-semibold"
+              >
+                Login
+              </a>
           </div>
 
           <div className="md:hidden">
@@ -97,13 +95,13 @@ export default function Navbar() {
                 Aplicar
               </Link>
               <a
-                href="https://xenni.sanity.studio"
+                href="https://xenni-platform-j26q58zod-mirnas-projects.vercel.app/login"
                 className="block mx-3 mt-2 text-center text-neutral-700 hover:text-[#002F6C] font-semibold"
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 Login
               </a>
+
+
             </div>
           </div>
         )}

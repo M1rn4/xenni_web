@@ -82,8 +82,8 @@ export default function ComunidadPage() {
               <span className="block text-[#00C2A1]">juntos!</span>
             </h1>
             <p className="text-xl text-neutral-200 mb-8">
-              Únete a la comunidad tech más vibrante de Latinoamérica. Conecta, aprende y construye el futuro junto a
-              builders de toda la región.
+               Forma parte de la comunidad que está usando tecnología para resolver los grandes desafíos del mundo.
+                Aprende blockchain, IA y sostenibilidad creando soluciones reales con impacto local y global.
             </p>
             <Link href="#" className="btn-primary btn-lg">
               <MessageCircle className="mr-2 w-5 h-5" />

@@ -39,7 +39,7 @@ export default function SobrePage() {
       color: "from-blue-500 to-cyan-500",
     },
     {
-      title: "Impacto Regional",
+      title: "Impacto Regional / Global",
       description: "Trabajamos para potenciar el talento tecnológico en toda Latinoamérica.",
       icon: Globe,
       color: "from-green-500 to-emerald-500",
@@ -72,8 +72,7 @@ export default function SobrePage() {
               <span className="block text-[#00C2A1]">misión</span>
             </h1>
             <p className="text-xl text-neutral-200 mb-8">
-              Formamos a la próxima generación de creadores tecnológicos en Latinoamérica, democratizando el acceso a
-              educación de calidad en tecnologías emergentes.
+              Empoderamo a jóvenes y ciudadanos con conocimientos tecnológicos y propósito para que se conviertan en agentes de cambio en sus comunidades y el mundo.
             </p>
           </div>
         </div>
@@ -85,19 +84,17 @@ export default function SobrePage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="font-display text-4xl font-bold text-[#002F6C] mb-6">¿Por qué existimos?</h2>
+
               <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
-                Xenni nació de una visión clara: transformar el panorama tecnológico de Latinoamérica creando
-                oportunidades de educación accesibles y de alta calidad en tecnologías emergentes.
+                Xenni nació con un propósito claro: transformar el acceso al conocimiento tecnológico en el mundo hispano, empoderando a personas con herramientas para resolver los desafíos sociales, económicos y ambientales más urgentes de nuestra era.
               </p>
               <p className="text-lg text-neutral-700 mb-6 leading-relaxed">
-                Creemos que el talento está distribuido equitativamente, pero las oportunidades no. Nuestra misión es
-                cerrar esa brecha, formando a los futuros líderes tecnológicos que resolverán los desafíos más
-                importantes de nuestra región.
+                Creemos que el talento está distribuido por igual, pero las oportunidades no. Por eso, nuestra misión es cerrar esa brecha, formando una nueva generación de creadores de impacto capaces de liderar la transformación digital con propósito desde cualquier rincón del mundo.
               </p>
               <p className="text-lg text-neutral-700 leading-relaxed">
-                A través de bootcamps intensivos, una comunidad vibrante y mentoría personalizada, estamos construyendo
-                un ecosistema donde el conocimiento fluye libremente y las oportunidades se multiplican.
+                A través de bootcamps intensivos, una comunidad global y mentoría personalizada, estamos construyendo un ecosistema donde aprender, crear y colaborar se convierten en la nueva moneda de cambio para el desarrollo sostenible.
               </p>
+              
             </div>
             <div className="bg-gradient-to-br from-[#00C2A1]/10 to-[#002F6C]/10 rounded-2xl p-8 md:p-12">
               <h3 className="font-display text-2xl font-bold text-[#002F6C] mb-6">Nuestra visión para 2030</h3>
@@ -108,8 +105,7 @@ export default function SobrePage() {
                   </div>
                   <div>
                     <p className="text-neutral-700">
-                      Formar a más de <span className="font-bold text-[#002F6C]">50,000 builders</span> en tecnologías
-                      emergentes.
+                      Formar a más de <span className="font-bold text-[#002F6C]">50,000 creadores de impacto </span> en tecnologías emergentes y sostenibles.
                     </p>
                   </div>
                 </div>
@@ -119,8 +115,7 @@ export default function SobrePage() {
                   </div>
                   <div>
                     <p className="text-neutral-700">
-                      Establecer <span className="font-bold text-[#002F6C]">hubs de innovación</span> en las principales
-                      ciudades de LATAM.
+                      Establecer <span className="font-bold text-[#002F6C]">hubs de innovación y aprendizaje</span> n las principales ciudades de LATAM y expandirnos globalmente.
                     </p>
                   </div>
                 </div>
@@ -130,7 +125,7 @@ export default function SobrePage() {
                   </div>
                   <div>
                     <p className="text-neutral-700">
-                      Impulsar la creación de <span className="font-bold text-[#002F6C]">1,000 startups</span> lideradas
+                      Impulsar la creación de <span className="font-bold text-[#002F6C]">1,000 startupscon impacto real</span> lideradas
                       por graduados de Xenni.
                     </p>
                   </div>
@@ -142,7 +137,7 @@ export default function SobrePage() {
                   <div>
                     <p className="text-neutral-700">
                       Posicionar a LATAM como un{" "}
-                      <span className="font-bold text-[#002F6C]">referente global en innovación tecnológica</span>.
+                      <span className="font-bold text-[#002F6C]">referente global en innovación tecnológica con propósito.</span>.
                     </p>
                   </div>
                 </div>

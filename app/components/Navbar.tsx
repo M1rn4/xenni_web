@@ -57,8 +57,9 @@ export default function Navbar() {
               Aplicar
             </Link>
             <a
-                href="https://xenni-platform-9ccaykquo-mirnas-projects.vercel.app//login"
+                href="https://xenni-platform.vercel.app/login"
                 className="block mx-3 mt-2 text-center text-neutral-700 hover:text-[#002F6C] font-semibold"
+                
               >
                 Login
               </a>
@@ -95,7 +96,7 @@ export default function Navbar() {
                 Aplicar
               </Link>
               <a
-                href="https://xenni-platform-j26q58zod-mirnas-projects.vercel.app/login"
+                href="https://xenni-platform.vercel.app/login"
                 className="block mx-3 mt-2 text-center text-neutral-700 hover:text-[#002F6C] font-semibold"
               >
                 Login

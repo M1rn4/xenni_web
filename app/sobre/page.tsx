@@ -11,12 +11,12 @@ export default function SobrePage() {
       bio: "Ingeniera mecatrónica y emprendedora en Web3, sostenibilidad y educación tech.",
       avatar: "/team/mirna.jpg",
     },
-    {
-      name: "Michel Anyosa ",
-      role: "Innovation & Strategy Advisor",
-      bio: "MsC y MBA con experiencia en gestión de la innovación, estrategia y emprendimiento.",
-      avatar: "/team/michell.jpeg",
-    },
+    // {
+    //   name: "Michel Anyosa ",
+    //   role: "Innovation & Strategy Advisor",
+    //   bio: "MsC y MBA con experiencia en gestión de la innovación, estrategia y emprendimiento.",
+    //   avatar: "/team/michell.jpeg",
+    // },
         {
       name: "Erlich Ampuero",
       role: "COO",

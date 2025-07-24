@@ -9,19 +9,27 @@ export default function SobrePage() {
       name: "Mirna Ampuero",
       role: "CEO & CTO",
       bio: "Ingeniera mecatrónica y emprendedora en Web3, sostenibilidad y educación tech.",
-      avatar: "/team/mirna.jpg",
+      avatar: "/team/mirna.png",
     },
-    // {
-    //   name: "Michel Anyosa ",
-    //   role: "Innovation & Strategy Advisor",
-    //   bio: "MsC y MBA con experiencia en gestión de la innovación, estrategia y emprendimiento.",
-    //   avatar: "/team/michell.jpeg",
-    // },
+
+        {
+      name: "Mitchell Mirano ",
+      role: "Data & Backend Architect",
+      bio: "Con más de 7 años de experiencia en análisis de datos, modelado estadístico y desarrollo backend.",
+      avatar: "/team/mitchell.png",
+    },
+
         {
       name: "Erlich Ampuero",
       role: "COO",
       bio: "COO y ganador de MakeX Latam. Apasionado por la tecnología, la robótica",
-      avatar: "/team/erlich.jpeg",
+      avatar: "team/erlich.png",
+    },
+            {
+      name: "Almendra Miranda",
+      role: "Coordinadora de Marketing .",
+      bio: "Especializada en marketing digital y desarrollo de estrategias comerciales para mypes y pymes",
+      avatar: "/team/almendra.png",
     },
   ]
 

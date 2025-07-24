@@ -97,13 +97,15 @@ export default function HomePage() {
       title: "Xenni Bootcamp: Web3 & Blockchain Intensivo",
       description: "6 semanas construyendo el futuro descentralizado",
       status: "Inscripciones abiertas",
+      statusLink: "/bootcamps/web3-blockchain",
       color: "bg-emerald-500",
     },
     {
-      date: "Abril 2, 2025",
+      date: "Agosto 2, 2025",
       title: "AI Workshop: Construye tu primer modelo",
       description: "Taller práctico de Machine Learning",
       status: "Próximamente",
+      statusLink: null, 
       color: "bg-blue-500",
     },
   ]
@@ -355,34 +357,46 @@ export default function HomePage() {
 
               {/* Enhanced Event Cards */}
               {upcomingEvents.map((event, index) => (
-                <div
-                  key={index}
-                  className={`bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in-up relative overflow-hidden`}
-                  style={{ animationDelay: `${0.7 + index * 0.1}s` }}
-                >
-                  {/* Animated background pattern */}
-                  <div className="absolute inset-0 opacity-5">
-                    <div className="w-full h-full bg-gradient-to-br from-[#00C2A1] to-transparent"></div>
-                  </div>
+              <div
+                key={index}
+                className={`bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in-up relative overflow-hidden`}
+                style={{ animationDelay: `${0.7 + index * 0.1}s` }}
+              >
+                {/* Animated background pattern */}
+                <div className="absolute inset-0 opacity-5">
+                  <div className="w-full h-full bg-gradient-to-br from-[#00C2A1] to-transparent"></div>
+                </div>
 
-                  <div className="flex items-start space-x-4 relative z-10">
-                    <div className={`w-4 h-4 ${event.color} rounded-full mt-2 animate-pulse shadow-lg`}></div>
-                    <div className="flex-1">
-                      <div className="flex items-center text-white/70 mb-3 text-sm">
-                        <Calendar className="w-4 h-4 mr-2" />
-                        {event.date}
-                      </div>
-                      <h3 className="font-display text-xl font-bold text-white mb-3 hover:text-[#00C2A1] transition-colors cursor-pointer">
-                        {event.title}
-                      </h3>
-                      <p className="text-white/80 mb-4">{event.description}</p>
-                      <div className="inline-flex items-center px-4 py-2 bg-[#00C2A1]/20 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-[#00C2A1]/30">
-                        {event.status}
-                      </div>
+                <div className="flex items-start space-x-4 relative z-10">
+                  <div className={`w-4 h-4 ${event.color} rounded-full mt-2 animate-pulse shadow-lg`}></div>
+                  <div className="flex-1">
+                    <div className="flex items-center text-white/70 mb-3 text-sm">
+                      <Calendar className="w-4 h-4 mr-2" />
+                      {event.date}
+                    </div>
+                    <h3 className="font-display text-xl font-bold text-white mb-3 hover:text-[#00C2A1] transition-colors cursor-pointer">
+                      {event.title}
+                    </h3>
+                    <p className="text-white/80 mb-4">{event.description}</p>
+                    <div className="inline-flex items-center px-4 py-2 bg-[#00C2A1]/20 backdrop-blur-sm rounded-full text-sm font-medium text-white border border-[#00C2A1]/30">
+                      {event.statusLink ? (
+                        <a
+                          href={event.statusLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline"
+                        >
+                          {event.status}
+                        </a>
+                      ) : (
+                        event.status
+                      )}
                     </div>
                   </div>
                 </div>
-              ))}
+              </div>
+            ))}
+
 
               {/* Interactive Xenni Lives Card */}
               <div className="bg-gradient-to-br from-[#00C2A1]/20 to-[#002F6C]/20 backdrop-blur-md rounded-3xl p-8 text-white shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 animate-fade-in-up animate-delay-900 relative overflow-hidden">

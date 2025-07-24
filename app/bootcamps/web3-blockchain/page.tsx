@@ -44,7 +44,7 @@ export default function Web3BootcampPage() {
     title: "Web3 & Blockchain Development",
     description:
       "Conviértete en un desarrollador blockchain completo. Aprende a construir aplicaciones descentralizadas y domina el ecosistema Web3 desde cero hasta un nivel avanzado.",
-    duration: "16 semanas",
+    duration: "8 semanas",
     modality: "Online en vivo",
     certificate: "NFT + Diploma PDF",
     price: "300 USD",
@@ -323,13 +323,28 @@ export default function Web3BootcampPage() {
           icon: GraduationCap,
           iconBg: "bg-purple-900",
           description: "Celebración de logros y entrega de certificados NFT a los graduados.",
-          deliverables: "Certificado NFT y diploma",
+          deliverables: "Certificado blockchain verificable",
           duration: "2 horas",
           resources: ["Certificate minting", "Alumni network", "Career guidance"],
         },
       ],
     },
   ]
+    const instructors = [
+    {
+    name: "Mirna Ampuero",
+    role: "Tech Educator & Web3 Advocate",
+    photo: "/instructor/mirna.png",
+    description: "Ingeniera mecatrónica, fundadora de Xenni y educadora apasionada por la tecnología con impacto social. Ha enseñado Web3 y representado proyectos en hackatones globales.",
+    },
+  ];
+  const partners = [
+    {
+      name: "Crypto Brunch",
+      logo: "/partners/web3foundation.png",
+      description: "Impulsando la innovación en tecnologías descentralizadas a través de soporte y financiamiento."
+    },
+  ];
 
   const tabs = [
     { id: "syllabus", label: "Plan de Estudios" },
@@ -824,48 +839,86 @@ export default function Web3BootcampPage() {
       )}
 
       {/* Instructors Section Placeholder */}
+        <div>
+      <nav className="flex justify-center mb-10 space-x-6">
+        <button
+          onClick={() => setActiveTab("instructors")}
+          className={`text-lg font-medium px-4 py-2 rounded-full border ${
+            activeTab === "instructors" ? "bg-[#002F6C] text-white" : "border-neutral-300 text-neutral-600"
+          }`}
+        >
+          Instructores
+        </button>
+        <button
+          onClick={() => setActiveTab("otros")}
+          className={`text-lg font-medium px-4 py-2 rounded-full border ${
+            activeTab === "otros" ? "bg-[#002F6C] text-white" : "border-neutral-300 text-neutral-600"
+          }`}
+        >
+          Socios estratégicos
+        </button>
+      </nav>
+
       {activeTab === "instructors" && (
         <section className="py-20 bg-neutral-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-display text-4xl font-bold text-[#002F6C] mb-6">Conoce a tus instructores</h2>
+            <h2 className="font-display text-4xl font-bold text-[#002F6C] mb-6">
+              Conoce a tus instructores
+            </h2>
             <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-12">
               Aprende de expertos con experiencia real en la industria blockchain y Web3.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl">👨‍💻</span>
+              {instructors.map((instructor, index) => (
+                <div key={index} className="bg-white rounded-2xl p-6 shadow-lg">
+                  <div className="w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full mx-auto mb-4 flex items-center justify-center overflow-hidden">
+                    {instructor.photo ? (
+                      <img
+                        src={instructor.photo}
+                        alt={instructor.name}
+                        className="w-full h-full object-cover rounded-full"
+                      />
+                    ) : (
+                      <span className="text-3xl">{instructor.emoji}</span>
+                    )}
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-[#002F6C]">
+                    {instructor.name}
+                  </h3>
+                  <p className="text-[#00C2A1]">{instructor.role}</p>
+                  <p className="text-neutral-600 mt-2">{instructor.description}</p>
                 </div>
-                <h3 className="font-display text-xl font-bold text-[#002F6C]">Carlos Vega</h3>
-                <p className="text-[#00C2A1]">Blockchain Developer</p>
-                <p className="text-neutral-600 mt-2">
-                  5+ años de experiencia en desarrollo blockchain. Ex-ingeniero en ConsenSys.
-                </p>
-              </div>
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl">👩‍💼</span>
-                </div>
-                <h3 className="font-display text-xl font-bold text-[#002F6C]">María González</h3>
-                <p className="text-[#00C2A1]">DeFi Specialist</p>
-                <p className="text-neutral-600 mt-2">
-                  Especialista en finanzas descentralizadas con experiencia en protocolos líderes.
-                </p>
-              </div>
-              <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <div className="w-24 h-24 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-3xl">👨‍🚀</span>
-                </div>
-                <h3 className="font-display text-xl font-bold text-[#002F6C]">Miguel Torres</h3>
-                <p className="text-[#00C2A1]">Web3 Architect</p>
-                <p className="text-neutral-600 mt-2">
-                  Arquitecto de soluciones Web3 con experiencia en startups blockchain.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </section>
       )}
+
+      {activeTab === "otros" && (
+        <section className="py-20 bg-neutral-50 text-center">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="font-display text-4xl font-bold text-[#002F6C] mb-6">
+              Nuestros socios estratégicos
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-12">
+              Colaboramos con líderes del ecosistema para construir un futuro más descentralizado.
+            </p>
+            <div className="grid md:grid-cols-3 gap-8">
+              {partners.map((partner, index) => (
+                <div key={index} className="bg-white rounded-2xl p-6 shadow-lg">
+                  <div className="w-24 h-24 mx-auto mb-4">
+                    <img src={partner.logo} alt={partner.name} className="w-full h-full object-contain" />
+                  </div>
+                  <h3 className="font-display text-xl font-bold text-[#002F6C]">{partner.name}</h3>
+                  <p className="text-neutral-600 mt-2">{partner.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+    </div>
+
 
       {/* FAQ Section - Conditional Rendering */}
       {activeTab === "faq" && (

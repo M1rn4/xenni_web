@@ -16,9 +16,9 @@ export default function BootcampsPage() {
       id: "web3-blockchain",
       title: "Web3 & Blockchain Development",
       description: "Construye aplicaciones descentralizadas y domina el ecosistema blockchain",
-      duration: "16 semanas",
-      level: "Intermedio",
-      students: 120,
+      duration: "8 semanas",
+      level: "Principiante",
+      students: 10000,
       nextStart: "15 Set 2025",
       technologies: ["Solidity", "React", "Web3.js", "IPFS"],
       color: "from-purple-500 to-pink-500",
@@ -76,7 +76,7 @@ export default function BootcampsPage() {
     setPreRegisterModal(true)
   }
 
-  const handleSubmitPreRegister = async (e) => {
+  const handleSubmitPreRegister = async (e: { preventDefault: () => void }) => {
     e.preventDefault()
     setIsSubmitting(true)
 
@@ -196,7 +196,7 @@ export default function BootcampsPage() {
                       </div>
                       <div className="text-center">
                         <Award className="w-5 h-5 text-[#00C2A1] mx-auto mb-1" />
-                        <div className="text-sm font-semibold text-neutral-800">Certificado NFT</div>
+                        <div className="text-sm font-semibold text-neutral-800">Certificado blockchain verificable</div>
                       </div>
                     </div>
 

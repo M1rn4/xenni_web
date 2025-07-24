@@ -57,7 +57,7 @@ export default function Navbar() {
               Aplicar
             </Link>
             <a
-                href="https://xenni-platform.vercel.app/login"
+                href="https://app-qa.xenni.xyz/login"
                 className="block mx-3 mt-2 text-center text-neutral-700 hover:text-[#002F6C] font-semibold"
                 
               >

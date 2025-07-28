@@ -100,14 +100,14 @@ export default function HomePage() {
       statusLink: "/bootcamps/web3-blockchain",
       color: "bg-emerald-500",
     },
-    {
-      date: "Agosto 2, 2025",
-      title: "AI Workshop: Construye tu primer modelo",
-      description: "Taller práctico de Machine Learning",
-      status: "Próximamente",
-      statusLink: null, 
-      color: "bg-blue-500",
-    },
+    // {
+    //   date: "Agosto 2, 2025",
+    //   title: "AI Workshop: Construye tu primer modelo",
+    //   description: "Taller práctico de Machine Learning",
+    //   status: "Próximamente",
+    //   statusLink: null, 
+    //   color: "bg-blue-500",
+    // },
   ]
 
   // const locations = ["XenniMéxico", "XenniBogotá", "XenniLima", "XenniBuenos", "XenniSantiago"]
@@ -293,24 +293,55 @@ export default function HomePage() {
               </p>
 
               {/* Email Subscription with Enhanced Styling */}
-              <div className="max-w-lg mb-12 animate-fade-in-up animate-delay-400">
-                <div className="flex flex-col sm:flex-row gap-4 group">
-                  <div className="flex-1 relative">
-                    <input
-                      type="email"
-                      placeholder="tu@email.com"
-                      className="w-full px-8 py-5 bg-white/10 backdrop-blur-md border-2 border-white/20 rounded-full text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-[#00C2A1] focus:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
-                    />
-                  </div>
-                  <button className="px-10 py-5 bg-[#00C2A1] text-white rounded-full font-bold hover:bg-[#00AF91] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 active:scale-95 text-lg">
-                    Comenzar ahora
-                  </button>
-                </div>
-                <p className="text-white/80 mt-4 flex items-center text-lg">
-                  <span className="w-3 h-3 bg-[#00C2A1] rounded-full mr-3 animate-pulse"></span>
-                  Únete a 500+ builders construyendo el futuro
-                </p>
-              </div>
+              
+<div className="max-w-lg mb-12 animate-fade-in-up animate-delay-400">
+  <form
+    action="https://tulista.us21.list-manage.com/subscribe/post?u=XXXX&id=XXXX" // reemplaza con tu URL real de Mailchimp
+    method="post"
+    target="_blank"
+    onSubmit={() => {
+      setTimeout(() => {
+        window.location.href = "https://chat.whatsapp.com/DEVGEWw3S7ILIzgL3yc9YC";
+      }, 2000);
+    }}
+    className="flex flex-col sm:flex-row gap-4 group"
+  >
+    <div className="flex-1 relative">
+      <input
+        type="email"
+        name="EMAIL"
+        placeholder="tu@email.com"
+        required
+        className="w-full px-8 py-5 bg-white/10 backdrop-blur-md border-2 border-white/20 rounded-full text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-[#00C2A1] focus:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
+      />
+    </div>
+    <input
+      type="submit"
+      value="Comenzar ahora"
+      className="px-10 py-5 bg-[#00C2A1] text-white rounded-full font-bold hover:bg-[#00AF91] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 active:scale-95 text-lg cursor-pointer"
+    />
+  </form>
+
+  <p className="text-white/80 mt-4 flex items-center text-lg">
+    <span className="w-3 h-3 bg-[#00C2A1] rounded-full mr-3 animate-pulse"></span>
+    Únete a 500+ builders construyendo el futuro
+  </p>
+
+  <p className="text-white/80 mt-4 text-sm">
+    ¿Prefieres unirte directo al grupo de WhatsApp? <br />
+    👉{" "}
+    <a
+      href="https://chat.whatsapp.com/DEVGEWw3S7ILIzgL3yc9YC"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="underline text-[#00C2A1] font-bold"
+    >
+      Únete aquí
+    </a>
+  </p>
+</div>
+
+
 
               {/* Enhanced CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up animate-delay-500">

@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import {
+import {Briefcase, Search,BarChart ,
   ArrowRight,
   Calendar,
   Clock,
@@ -31,6 +31,8 @@ import {
   Zap,
   Star,
   Lightbulb,
+  ClipboardList,
+  Puzzle,
 } from "lucide-react"
 
 export default function Web3BootcampPage() {
@@ -43,19 +45,48 @@ export default function Web3BootcampPage() {
   const bootcampInfo = {
     title: "Web3 & Blockchain Development",
     description:
-      "Conviértete en un desarrollador blockchain completo. Aprende a construir aplicaciones descentralizadas y domina el ecosistema Web3 desde cero hasta un nivel avanzado.",
+      "Crea tu primer proyecto Web3 desde cero. Aprende los fundamentos de blockchain y participa en la construcción de un prototipo funcional en equipo, combinando tecnología, diseño y modelos de negocio innovadores.",
+
     duration: "8 semanas",
-    modality: "Online en vivo",
+    modality: "Online en vivo + sesiones híbridas",
     certificate: "NFT + Diploma PDF",
-    price: "300 USD",
-    includes: ["Mentoría personalizada", "Acceso a comunidad", "Recursos adicionales", "Proyectos prácticos"],
+    price: "300 Soles",
+    includes: [
+      "Mentoría personalizada",
+      "Acceso a comunidad Web3",
+      "Proyectos prácticos guiados",
+      "Recursos descargables y plantillas",
+      "Simulaciones de pitch",
+      "Feedback por expertos",
+    ],
+
     nextStart: "15 Set 2025",
     level: "Intermedio",
     students: 120,
-    technologies: ["Solidity", "React", "Web3.js", "IPFS", "Hardhat", "Ethers.js", "MetaMask", "The Graph"],
+
+    technologies: [
+      "Solidity",
+      "ThirdWeb",
+      "Figma",
+      "IA para developers",
+      "Notion",
+      "MetaMask",
+    ],
+
+
+    focus: [
+      "Fundamentos Web3",
+      "Tokenomics para proyectos",
+      "Gestión ágil de equipos",
+      "Prototipado visual",
+      "Presentación de ideas (pitch)",
+    ],
+
     color: "from-purple-500 to-pink-500",
-    icon: "🔗",
-  }
+    icon: "🚀",
+  };
+
+
 
   const workshops = [
     {
@@ -146,153 +177,211 @@ export default function Web3BootcampPage() {
 
   const syllabus = [
     {
-      stage: "Fundamentals",
-      description: "Bases sólidas para entender el ecosistema blockchain y Web3",
-      color: "from-blue-500 to-cyan-500",
-      bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
-      borderColor: "border-blue-200",
-      sessions: [
-        {
-          title: "Fundamentos y Oportunidades",
-          icon: BookOpen,
-          iconBg: "bg-blue-500",
-          description:
-            "Introducción a la tecnología blockchain, sus principios fundamentales y las oportunidades que ofrece en el mercado actual.",
-          deliverables: "Quiz de conceptos básicos",
-          duration: "2 horas",
-          resources: ["Video introductorio", "Whitepaper de Bitcoin", "Ejercicios prácticos"],
-        },
-        {
-          title: "Historia y Evolución",
-          icon: Globe,
-          iconBg: "bg-blue-600",
-          description:
-            "Recorrido por la historia de blockchain desde Bitcoin hasta las plataformas modernas de contratos inteligentes.",
-          deliverables: "Línea de tiempo colaborativa",
-          duration: "1.5 horas",
-          resources: ["Timeline interactivo", "Documentales", "Casos de estudio"],
-        },
-        {
-          title: "Componentes y Consenso",
-          icon: Settings,
-          iconBg: "bg-cyan-500",
-          description:
-            "Análisis de los componentes técnicos de una blockchain y los diferentes algoritmos de consenso.",
-          deliverables: "Diagrama comparativo de mecanismos",
-          duration: "2.5 horas",
-          resources: ["Simulador de consenso", "Diagramas técnicos", "Laboratorio virtual"],
-        },
-        {
-          title: "Clasificación y Escalabilidad",
-          icon: Target,
-          iconBg: "bg-cyan-600",
-          description:
-            "Tipos de blockchains (públicas, privadas, híbridas) y soluciones para mejorar su escalabilidad.",
-          deliverables: "Informe de investigación",
-          duration: "2 horas",
-          resources: ["Comparativa de redes", "Papers técnicos", "Análisis de rendimiento"],
-        },
-        {
-          title: "Criptomonedas y Tokenización",
-          icon: Coins,
-          iconBg: "bg-blue-700",
-          description: "Estudio de criptomonedas y diferentes modelos de tokens (fungibles y no fungibles).",
-          deliverables: "Presentación de un modelo de token",
-          duration: "2 horas",
-          resources: ["Token standards", "Ejemplos de tokenomics", "Herramientas de análisis"],
-        },
-        {
-          title: "Gestión de Wallets",
-          icon: Shield,
-          iconBg: "bg-cyan-700",
-          description: "Prácticas para la gestión segura de wallets y claves privadas en el ecosistema blockchain.",
-          deliverables: "Configuración de wallet personal",
-          duration: "1.5 horas",
-          resources: ["Guías de seguridad", "Wallets recomendadas", "Mejores prácticas"],
-        },
-        {
-          title: "Arquitectura de Ethereum",
-          icon: Brain,
-          iconBg: "bg-blue-800",
-          description: "Introducción a la arquitectura de Ethereum y los fundamentos de los contratos inteligentes.",
-          deliverables: "Primer contrato inteligente básico",
-          duration: "3 horas",
-          resources: ["Ethereum docs", "Remix IDE", "Ejemplos de código"],
-        },
-        {
-          title: "Casos de Uso y Tendencias",
-          icon: Rocket,
-          iconBg: "bg-cyan-800",
-          description: "Exploración de casos de uso reales y tendencias emergentes en la tecnología blockchain.",
-          deliverables: "Análisis de caso de estudio",
-          duration: "2 horas",
-          resources: ["Case studies", "Reportes de industria", "Entrevistas con expertos"],
-        },
-      ],
+  stage: "Introducción a Web3 y Blockchain",
+  description: "Conoce los principios fundamentales de la tecnología blockchain y su evolución en el ecosistema Web3.",
+  color: "from-blue-500 to-cyan-500",
+  bgColor: "bg-gradient-to-br from-blue-50 to-cyan-50",
+  borderColor: "border-blue-200",
+  sessions: [
+    {
+      title: "Fundamentos y Oportunidades",
+      icon: BookOpen,
+      iconBg: "bg-blue-500",
+      description:
+        "Introducción a la tecnología blockchain, sus principios fundamentales y las oportunidades que ofrece en el mercado actual.",
+      deliverables: "Quiz de conceptos básicos",
+      duration: "2 horas",
+      resources: ["Video introductorio", "Whitepaper de Bitcoin", "Ejercicios prácticos"]
     },
     {
-      stage: "Intermedio",
-      description: "Profundiza en el desarrollo y la economía de aplicaciones blockchain",
-      color: "from-purple-500 to-pink-500",
-      bgColor: "bg-gradient-to-br from-purple-50 to-pink-50",
-      borderColor: "border-purple-200",
-      sessions: [
-        {
-          title: "Economía Blockchain",
-          icon: Coins,
-          iconBg: "bg-purple-500",
-          description: "Principios económicos aplicados a blockchain y diseño de sistemas de tokenomics.",
-          deliverables: "Diseño de tokenomics para un proyecto",
-          duration: "2.5 horas",
-          resources: ["Modelos económicos", "Calculadoras de tokenomics", "Ejemplos reales"],
-        },
-        {
-          title: "Finanzas Descentralizadas",
-          icon: Target,
-          iconBg: "bg-purple-600",
-          description: "Exploración del ecosistema DeFi, protocolos principales y oportunidades de desarrollo.",
-          deliverables: "Implementación de un contrato DeFi simple",
-          duration: "3 horas",
-          resources: ["Protocolos DeFi", "Smart contracts", "Yield farming"],
-        },
-        {
-          title: "NFTs y Activos Digitales",
-          icon: FileText,
-          iconBg: "bg-pink-500",
-          description: "Análisis del mercado de NFTs, estándares técnicos y casos de uso innovadores.",
-          deliverables: "Creación de una colección NFT",
-          duration: "2.5 horas",
-          resources: ["ERC-721/1155", "Marketplaces", "Metadata standards"],
-        },
-        {
-          title: "Gobernanza y DAOs",
-          icon: Users,
-          iconBg: "bg-pink-600",
-          description: "Estudio de modelos de gobernanza en blockchain y organizaciones autónomas descentralizadas.",
-          deliverables: "Propuesta de gobernanza para un proyecto",
-          duration: "2 horas",
-          resources: ["DAO frameworks", "Voting mechanisms", "Governance tokens"],
-        },
-        {
-          title: "Monetización Web3",
-          icon: Brain,
-          iconBg: "bg-purple-700",
-          description: "Estrategias de monetización y modelos de negocio en el ecosistema Web3.",
-          deliverables: "Plan de monetización para un proyecto",
-          duration: "2 horas",
-          resources: ["Business models", "Revenue streams", "Case studies"],
-        },
-        {
-          title: "Casos de Éxito",
-          icon: Rocket,
-          iconBg: "bg-pink-700",
-          description: "Análisis de proyectos exitosos y estrategias de crecimiento en el espacio blockchain.",
-          deliverables: "Estrategia de growth para un proyecto",
-          duration: "2 horas",
-          resources: ["Success stories", "Growth metrics", "Marketing strategies"],
-        },
-      ],
+      title: "Historia y Evolución",
+      icon: Globe,
+      iconBg: "bg-blue-600",
+      description:
+        "Recorrido por la historia de blockchain desde Bitcoin hasta las plataformas modernas de contratos inteligentes.",
+      deliverables: "Línea de tiempo colaborativa",
+      duration: "1.5 horas",
+      resources: ["Timeline interactivo", "Documentales", "Casos de estudio"]
     },
+    {
+      title: "Casos de Uso y Tendencias",
+      icon: Rocket,
+      iconBg: "bg-cyan-800",
+      description: "Exploración de casos de uso reales y tendencias emergentes en la tecnología blockchain.",
+      deliverables: "Análisis de caso de estudio",
+      duration: "2 horas",
+      resources: ["Case studies", "Reportes de industria", "Entrevistas con expertos"]
+    }
+  ]
+},
+{
+  stage: "Infraestructura Blockchain y Seguridad",
+  description: "Aprende cómo funcionan las redes blockchain, su arquitectura y cómo interactuar con ellas de forma segura.",
+  color: "from-blue-600 to-cyan-600",
+  bgColor: "bg-gradient-to-br from-blue-50 to-cyan-100",
+  borderColor: "border-blue-300",
+  sessions: [
+    {
+      title: "Componentes y Consenso",
+      icon: Settings,
+      iconBg: "bg-cyan-500",
+      description:
+        "Análisis de los componentes técnicos de una blockchain y los diferentes algoritmos de consenso.",
+      deliverables: "Diagrama comparativo de mecanismos",
+      duration: "2.5 horas",
+      resources: ["Simulador de consenso", "Diagramas técnicos", "Laboratorio virtual"]
+    },
+    {
+      title: "Clasificación y Escalabilidad",
+      icon: Target,
+      iconBg: "bg-cyan-600",
+      description:
+        "Tipos de blockchains (públicas, privadas, híbridas) y soluciones para mejorar su escalabilidad.",
+      deliverables: "Informe de investigación",
+      duration: "2 horas",
+      resources: ["Comparativa de redes", "Papers técnicos", "Análisis de rendimiento"]
+    },
+    {
+      title: "Gestión de Wallets",
+      icon: Shield,
+      iconBg: "bg-cyan-700",
+      description: "Prácticas para la gestión segura de wallets y claves privadas en el ecosistema blockchain.",
+      deliverables: "Configuración de wallet personal",
+      duration: "1.5 horas",
+      resources: ["Guías de seguridad", "Wallets recomendadas", "Mejores prácticas"]
+    }
+  ]
+},
+{
+  stage: "Ethereum, Criptomonedas y Tokenización",
+  description: "Profundiza en el ecosistema de Ethereum y comprende cómo funcionan las criptomonedas y los modelos de tokens.",
+  color: "from-blue-700 to-cyan-700",
+  bgColor: "bg-gradient-to-br from-blue-100 to-cyan-100",
+  borderColor: "border-blue-400",
+  sessions: [
+    {
+      title: "Criptomonedas y Tokenización",
+      icon: Coins,
+      iconBg: "bg-blue-700",
+      description: "Estudio de criptomonedas y diferentes modelos de tokens (fungibles y no fungibles).",
+      deliverables: "Presentación de un modelo de token",
+      duration: "2 horas",
+      resources: ["Token standards", "Ejemplos de tokenomics", "Herramientas de análisis"]
+    },
+    {
+      title: "Finanzas desce",
+      icon: Brain,
+      iconBg: "bg-blue-800",
+      description: "Introducción a la arquitectura de Ethereum y los fundamentos de los contratos inteligentes.",
+      deliverables: "Primer contrato inteligente básico",
+      duration: "3 horas",
+      resources: ["Ethereum docs", "Remix IDE", "Ejemplos de código"]
+    }
+  ]
+},
+
+{
+  stage: "Prototipado Web3",
+  description: "Aprende a diseñar y conectar las piezas clave de un proyecto Web3. Crea prototipos funcionales utilizando herramientas como Figma y ThirdWeb, desde la interfaz hasta la lógica básica de contratos inteligentes.",
+  color: "from-purple-500 to-pink-500",
+  bgColor: "bg-gradient-to-br from-purple-50 to-pink-50",
+  borderColor: "border-purple-200",
+  sessions: [
+        {
+      title: "IA para Developers (Dev0, ChatGPT, Copilot)",
+      icon: Zap,
+      iconBg: "bg-pink-600",
+      description: "Descubre cómo usar inteligencia artificial para acelerar el desarrollo y la documentación.",
+      deliverables: "Uso asistido de IA para avanzar en tu proyecto",
+      duration: "2 horas",
+      resources: ["Dev0", "Copilot", "Prompts para debugging"]
+    },
+    {
+      title: "Prototipa tu dApp con diseño e interacción",
+      icon: Puzzle,
+      iconBg: "bg-pink-500",
+      description: "Crea interfaces y conecta funciones Web3 sin necesidad de programar todo desde cero.",
+      deliverables: "Prototipo visual + conexión con smart contract",
+      duration: "2.5 horas",
+      resources: ["Figma", "ThirdWeb", "Componentes Web3"]
+    },
+
+  ]
+},
+
+{
+  stage: "Estrategia, Impacto y Pitch para Negocios Web3",
+  description: "Aprende a estructurar un modelo Web3 con propósito, validar tu propuesta en comunidad y presentar tu proyecto de forma clara y estratégica ante potenciales aliados o inversores.",
+  color: "from-purple-500 to-pink-500",
+  bgColor: "bg-gradient-to-br from-purple-50 to-pink-50",
+  borderColor: "border-purple-200",
+  sessions: [
+    {
+      title: "Fundamentos del Modelo Web3",
+      icon: Briefcase,
+      iconBg: "bg-purple-600",
+      description: "Diferencias entre modelos Web2 y Web3. Cómo se crea, captura y distribuye valor en entornos descentralizados.",
+      deliverables: "Comparativa Web2 vs Web3 + mapa de stakeholders",
+      duration: "2 horas",
+      resources: ["Frameworks de modelo Web3", "Artículos clave", "Videos"]
+    },
+    {
+      title: "Validación de Problemas en Ecosistemas Web3",
+      icon: Search,
+      iconBg: "bg-purple-500",
+      description: "Aprende a identificar problemas reales en comunidades y cómo estructurar soluciones validadas.",
+      deliverables: "Ficha de problema validado",
+      duration: "2 horas",
+      resources: ["Guía de entrevistas", "Ejemplos reales", "Survey templates"]
+    },
+    {
+      title: "Elevator Pitch y Deck",
+      icon: Mic,
+      iconBg: "bg-purple-700",
+      description: "Prepara un pitch claro, breve y persuasivo para presentar tu proyecto.",
+      deliverables: "Pitch grabado + deck estructurado",
+      duration: "2 horas",
+      resources: ["Estructura de pitch", "Ejemplos", "Feedback"]
+    },
+    {
+      title: "Simulación de Pitch y Feedback Real",
+      icon: Rocket,
+      iconBg: "bg-pink-700",
+      description: "Presenta tu proyecto frente a mentores y compañeros para recibir retroalimentación y mejorar.",
+      deliverables: "Presentación final simulada",
+      duration: "2 horas",
+      resources: ["Plantillas de presentación", "Panel de feedback", "Criterios de evaluación"]
+    }
+  ]
+},
+{
+  stage: "Tokenomics y Analítica para Proyectos Web3",
+  description: "Diseña modelos económicos sostenibles y aprende a medir el rendimiento y la tracción de proyectos Web3 mediante herramientas y métricas clave on-chain.",
+  color: "from-indigo-500 to-blue-500",
+  bgColor: "bg-gradient-to-br from-indigo-50 to-blue-50",
+  borderColor: "border-indigo-200",
+  sessions: [
+    {
+      title: "Tokenomics Sostenible",
+      icon: Coins,
+      iconBg: "bg-indigo-600",
+      description: "Diseña una economía basada en tokens alineada con los incentivos de tu comunidad. Aprende sobre tipos de tokens, distribución, vesting y mecanismos de utilidad y gobernanza.",
+      deliverables: "Canvas de tokenomics + lógica de distribución",
+      duration: "2.5 horas",
+      resources: ["Token Builder", "Casos reales", "Plantillas de distribución"]
+    },
+    {
+      title: "Métricas y KPIs en Web3",
+      icon: BarChart,
+      iconBg: "bg-blue-600",
+      description: "Aprende a medir el rendimiento de tu proyecto Web3 utilizando métricas como TVL, usuarios activos, gobernanza, retención, y otros datos clave on-chain.",
+      deliverables: "Dashboard de métricas clave",
+      duration: "1.5 horas",
+      resources: ["Plantillas Notion", "Referencias técnicas", "Herramientas como Dune y The Graph"]
+    }
+  ]
+},
+
     {
       stage: "Proyecto Final",
       description: "Aplica todo lo aprendido en un proyecto real con impacto",
@@ -534,7 +623,7 @@ export default function Web3BootcampPage() {
                         <div className="flex items-center justify-between mb-4">
                           <div>
                             <h3 className="font-display text-3xl font-bold text-[#002F6C] mb-2">
-                              Etapa {stageIndex + 1}: {stage.stage}
+                              Curso {stageIndex + 1}: {stage.stage}
                             </h3>
                             <p className="text-lg text-neutral-600">{stage.description}</p>
                           </div>
@@ -640,8 +729,8 @@ export default function Web3BootcampPage() {
           </section>
 
           {/* Workshops Section */}
-          <section className="py-20 bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* <section className="py-20 bg-white"> */}
+            {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center mb-16">
                 <h2 className="font-display text-4xl font-bold text-[#002F6C] mb-6">
                   🛠️ Aprende haciendo: workshops y experiencias prácticas
@@ -650,9 +739,9 @@ export default function Web3BootcampPage() {
                   En Xenni no solo aprendes teoría. Construyes, practicas y creas proyectos reales que puedes mostrar en
                   tu portafolio profesional.
                 </p>
-              </div>
+              </div> */}
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {workshops.map((workshop, index) => (
                   <div
                     key={index}
@@ -660,9 +749,9 @@ export default function Web3BootcampPage() {
                     onMouseEnter={() => setHoveredWorkshop(index)}
                     onMouseLeave={() => setHoveredWorkshop(null)}
                   >
-                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 hover:border-[#00C2A1]/30 hover:scale-105 h-full">
+                    <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-neutral-200 hover:border-[#00C2A1]/30 hover:scale-105 h-full"> */}
                       {/* Header with gradient */}
-                      <div className={`h-32 bg-gradient-to-br ${workshop.color} relative overflow-hidden`}>
+                      {/* <div className={`h-32 bg-gradient-to-br ${workshop.color} relative overflow-hidden`}>
                         <div className="absolute inset-0 bg-black/10"></div>
                         <div className="absolute top-4 left-4">
                           <div
@@ -681,30 +770,30 @@ export default function Web3BootcampPage() {
                             {workshop.difficulty}
                           </span>
                         </div>
-                      </div>
+                      </div> */}
 
                       {/* Content */}
-                      <div className="p-6">
+                      {/* <div className="p-6">
                         <h3 className="font-display text-xl font-bold text-[#002F6C] mb-3 group-hover:text-[#00C2A1] transition-colors duration-300">
                           {workshop.title}
                         </h3>
-                        <p className="text-neutral-600 mb-4 leading-relaxed">{workshop.description}</p>
+                        <p className="text-neutral-600 mb-4 leading-relaxed">{workshop.description}</p> */}
 
                         {/* Duration */}
-                        <div className="flex items-center space-x-2 mb-4">
+                        {/* <div className="flex items-center space-x-2 mb-4">
                           <Clock className="w-4 h-4 text-[#00C2A1]" />
                           <span className="text-sm font-medium text-neutral-700">{workshop.duration}</span>
-                        </div>
+                        </div> */}
 
                         {/* Expanded content on hover */}
-                        <div
+                        {/* <div
                           className={`transition-all duration-300 overflow-hidden ${
                             hoveredWorkshop === index ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                           }`}
                         >
-                          <div className="space-y-4 pt-4 border-t border-neutral-200">
+                          <div className="space-y-4 pt-4 border-t border-neutral-200"> */}
                             {/* Tools */}
-                            <div>
+                            {/* <div>
                               <h4 className="font-semibold text-[#002F6C] mb-2 text-sm">Herramientas:</h4>
                               <div className="flex flex-wrap gap-1">
                                 {workshop.tools.map((tool, toolIndex) => (
@@ -716,10 +805,10 @@ export default function Web3BootcampPage() {
                                   </span>
                                 ))}
                               </div>
-                            </div>
+                            </div> */}
 
                             {/* Outcomes */}
-                            <div>
+                            {/* <div>
                               <h4 className="font-semibold text-[#002F6C] mb-2 text-sm">Resultados:</h4>
                               <ul className="space-y-1">
                                 {workshop.outcomes.map((outcome, outcomeIndex) => (
@@ -731,20 +820,20 @@ export default function Web3BootcampPage() {
                               </ul>
                             </div>
                           </div>
-                        </div>
+                        </div> */}
 
                         {/* CTA */}
-                        <div className="mt-4">
+                        {/* <div className="mt-4">
                           <button className="w-full btn-primary text-sm py-2">Ver detalles</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 ))}
-              </div>
+              </div> */}
 
               {/* Bottom CTA */}
-              <div className="mt-16 text-center">
+              {/* <div className="mt-16 text-center">
                 <div className="bg-gradient-to-br from-[#00C2A1]/10 to-[#002F6C]/10 rounded-2xl p-8 border border-[#00C2A1]/20">
                   <h3 className="font-display text-2xl font-bold text-[#002F6C] mb-4">
                     🚀 ¿Listo para poner las manos en el código?
@@ -763,8 +852,8 @@ export default function Web3BootcampPage() {
                   </Link>
                 </div>
               </div>
-            </div>
-          </section>
+            </div> */}
+         {/* </section> */}
         </>
       )}
 

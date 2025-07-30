@@ -35,8 +35,8 @@ export default function Footer() {
       links: [
         { name: "Centro de Ayuda", href: "#" },
         { name: "Contacto", href: "#" },
-        { name: "Términos", href: "#" },
-        { name: "Privacidad", href: "#" },
+        { name: "Términos", href: "/terminos" },
+        { name: "Privacidad", href: "/privacidad" },
       ],
     },
   ]

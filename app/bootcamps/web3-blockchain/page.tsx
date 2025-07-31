@@ -52,7 +52,6 @@ export default function Web3BootcampPage() {
     certificate: "NFT + Diploma PDF",
     price: "100 usd",
     includes: [
-      "Recupara el 50% de tu inversion si te gradùas",
       "Gana premios",
       "Mentoría personalizada",
       "Acceso a comunidad Web3",
@@ -497,7 +496,7 @@ export default function Web3BootcampPage() {
             <div className="relative hidden md:block">
               <div className="glass-card p-8">
                 <div className="bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-xl p-6">
-                  <h3 className="font-display text-2xl font-bold mb-4">Información del bootcamp</h3>
+                  <h3 className="font-display text-2xl font-bold mb-4">Recupera el 50% de tu inversiòn si te gradùas</h3>
 
                   <div className="space-y-4">
                     <div>
@@ -1077,7 +1076,7 @@ export default function Web3BootcampPage() {
                   iconColor: "bg-orange-500",
                   question: "¿Hay becas disponibles?",
                   answer:
-                    "Sí, ofrecemos becas parciales del 20% al 50% basadas en mérito académico y situación económica. Puedes aplicar completando el formulario de beca con tu motivación y proyecto de impacto. Las becas se otorgan por orden de aplicación.",
+                    "Sí, ofrecemos becas parciales del 100% al 50% basadas en mérito académico y situación económica. Puedes aplicar completando el formulario de beca con tu motivación y proyecto de impacto. Las becas se otorgan por orden de aplicación.",
                 },
               ].map((faq, index) => (
                 <div key={index} className="group">

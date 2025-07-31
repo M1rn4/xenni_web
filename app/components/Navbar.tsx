@@ -16,7 +16,7 @@ export default function Navbar() {
   }, [])
 
   const navItems = [
-    { name: "Inicio", href: "/" },
+
     { name: "Comunidad", href: "/comunidad" },
     { name: "Xenni Lives", href: "/xenni-lives" },
     { name: "Recursos", href: "/recursos" },

@@ -138,7 +138,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="pt-14">
+    <div className="pt-16">
       {/* Hero Section */}
       <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#002F6C] via-[#001D47] to-[#000B22]">
         {/* Animated Background Elements */}

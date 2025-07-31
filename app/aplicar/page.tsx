@@ -57,9 +57,13 @@ export default function AplicarPage() {
       {/* Hero */}
       <section className="py-20 bg-white relative">
         <div className="absolute top-4 left-1/2 transform -translate-x-1/2">
-          <div className="bg-[#00C2A1]/20 text-[#002F6C] font-bold text-lg px-6 py-2 rounded-full border-2 border-[#00C2A1] shadow-md animate-pulse sticky top-0">
-            🎁 ¡Premiamos la disciplina! Si te gradúas, recuperas el 50% de tu inversión 🎓
-          </div>
+          <div className="bg-[#00C2A1]/20 text-[#002F6C] font-extrabold text-xl sm:text-2xl px-8 py-4 rounded-3xl border-4 border-[#00C2A1] shadow-xl animate-pulse sticky top-4 z-50 text-center backdrop-blur-md">
+        🎁 ¡Premiamos la disciplina! <br className="block sm:hidden" />
+        <span className="underline decoration-[#00C2A1] underline-offset-4">
+          Si te gradúas, recuperas el 50% de tu inversión 🎓
+        </span>
+      </div>
+
         </div>
         <div className="max-w-5xl mx-auto px-4 text-center pt-20">
           <h1 className="text-4xl font-bold mb-6 text-[#002F6C]">
@@ -106,20 +110,44 @@ export default function AplicarPage() {
 
       {/* Beneficios */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            {[{ icon: Users, title: "Mentorías personalizadas", description: "Sesiones 1:1 con expertos que te acompañan en cada paso" }, { icon: Clock, title: "Horarios flexibles", description: "Clases en vivo adaptadas a tu ritmo y zona horaria" }, { icon: Award, title: "Certificación NFT", description: "Diploma verificado en blockchain, coleccionable y reconocible" }].map((benefit, index) => (
-              <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-[#00C2A1]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
-                  <benefit.icon className="w-8 h-8 text-[#00C2A1]" />
-                </div>
-                <h3 className="font-display text-xl font-bold text-[#002F6C] mb-2">{benefit.title}</h3>
-                <p className="text-neutral-600">{benefit.description}</p>
-              </div>
-            ))}
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h3 className="text-3xl font-bold text-center text-[#002F6C] mb-12">
+      Beneficios por ser parte de la comunidad
+    </h3>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        {
+          icon: Users,
+          title: "Mentorías personalizadas",
+          description: "4 Sesiones 1:1 con expertos que te acompañan en cada paso",
+        },
+        {
+          icon: Clock,
+          title: "Horarios flexibles",
+          description: "Clases en vivo adaptadas a tu ritmo y zona horaria",
+        },
+        {
+          icon: Award,
+          title: "Certificación NFT",
+          description: "Diploma verificado en blockchain, coleccionable y reconocible",
+        },
+      ].map((benefit, index) => {
+        const Icon = benefit.icon;
+        return (
+          <div key={index} className="text-center">
+            <div className="w-16 h-16 bg-[#00C2A1]/10 rounded-xl flex items-center justify-center mx-auto mb-4">
+              <Icon className="w-8 h-8 text-[#00C2A1]" />
+            </div>
+            <h4 className="text-xl font-bold text-[#002F6C] mb-2">{benefit.title}</h4>
+            <p className="text-neutral-600">{benefit.description}</p>
           </div>
-        </div>
-      </section>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
 
       {/* Aquí puede seguir el formulario si se desea más abajo */}
     </div>

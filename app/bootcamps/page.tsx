@@ -14,13 +14,19 @@ export default function BootcampsPage() {
   const bootcamps = [
     {
       id: "web3-blockchain",
-      title: "Web3 & Blockchain Development",
-      description: "Construye aplicaciones descentralizadas y domina el ecosistema blockchain",
+      title: "Blockchain Builder Bootcamp",
+      description: "El bootcamp Web3 donde construyes, creces y ganas dinero",
       duration: "8 semanas",
       level: "Principiante",
       students: 10000,
       nextStart: "15 Set 2025",
-      technologies: ["Solidity", "React", "Web3.js", "IPFS"],
+      technologies: [
+      "Solidity",
+      "ThirdWeb",
+      "React",
+      "IA para developers",
+      "MetaMask",
+    ],
       color: "from-purple-500 to-pink-500",
       icon: "🔗",
       available: true,

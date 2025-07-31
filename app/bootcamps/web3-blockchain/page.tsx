@@ -43,15 +43,17 @@ export default function Web3BootcampPage() {
   const [hoveredWorkshop, setHoveredWorkshop] = useState(null)
 
   const bootcampInfo = {
-    title: "Web3 & Blockchain Development",
+    title: "El bootcamp Web3 donde construyes, creces y ganas",
     description:
       "Crea tu primer proyecto Web3 desde cero. Aprende los fundamentos de blockchain y participa en la construcción de un prototipo funcional en equipo, combinando tecnología, diseño y modelos de negocio innovadores.",
 
     duration: "8 semanas",
     modality: "Online en vivo + sesiones híbridas",
     certificate: "NFT + Diploma PDF",
-    price: "300 Soles",
+    price: "100 usd",
     includes: [
+      "Recupara el 25% de tu inversion si te gradùas",
+      "Gana premios",
       "Mentoría personalizada",
       "Acceso a comunidad Web3",
       "Proyectos prácticos guiados",
@@ -61,15 +63,14 @@ export default function Web3BootcampPage() {
     ],
 
     nextStart: "15 Set 2025",
-    level: "Intermedio",
-    students: 120,
+    level: "Basico",
+    students: 1000,
 
     technologies: [
       "Solidity",
       "ThirdWeb",
-      "Figma",
+      "React",
       "IA para developers",
-      "Notion",
       "MetaMask",
     ],
 

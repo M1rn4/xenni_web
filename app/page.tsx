@@ -47,7 +47,7 @@ export default function HomePage() {
     },
   ]
 
-  const floatingWords = ["Web3", "IA", "IoT", "Blockchain", "Machine Learning", "Ciberseguridad"]
+  const floatingWords = ["Web3", "IA", "IoT", "Blockchain", "Ciberseguridad"]
 
   const techWords = ["innovadoras", "disruptivas", "emergentes", "revolucionarias", "transformadoras"]
   const revolutionWords = ["tecnológica", "digital", "innovadora", "disruptiva", "del futuro"]
@@ -138,7 +138,7 @@ export default function HomePage() {
   }, [])
 
   return (
-    <div className="pt-16">
+    <div className="pt-14">
       {/* Hero Section */}
       <section className="min-h-screen relative overflow-hidden bg-gradient-to-br from-[#002F6C] via-[#001D47] to-[#000B22]">
         {/* Animated Background Elements */}
@@ -295,56 +295,35 @@ export default function HomePage() {
               {/* Email Subscription with Enhanced Styling */}
               
 <div className="max-w-lg mb-12 animate-fade-in-up animate-delay-400">
-  <form
-    action="https://tulista.us21.list-manage.com/subscribe/post?u=XXXX&id=XXXX" // reemplaza con tu URL real de Mailchimp
-    method="post"
-    target="_blank"
-    onSubmit={() => {
-      setTimeout(() => {
-        window.location.href = "https://chat.whatsapp.com/DEVGEWw3S7ILIzgL3yc9YC";
-      }, 2000);
-    }}
-    className="flex flex-col sm:flex-row gap-4 group"
-  >
-    <div className="flex-1 relative">
-      <input
-        type="email"
-        name="EMAIL"
-        placeholder="tu@email.com"
-        required
-        className="w-full px-8 py-5 bg-white/10 backdrop-blur-md border-2 border-white/20 rounded-full text-white placeholder-white/70 focus:outline-none focus:ring-0 focus:border-[#00C2A1] focus:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
-      />
-    </div>
-    <input
-      type="submit"
-      value="Comenzar ahora"
-      className="px-10 py-5 bg-[#00C2A1] text-white rounded-full font-bold hover:bg-[#00AF91] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105 hover:-translate-y-1 active:scale-95 text-lg cursor-pointer"
-    />
-  </form>
+  <div className="flex flex-col sm:flex-row gap-4 w-full">
+    <a
+      href="/aplicar"
+      className="flex-1 text-center px-6 py-5 bg-[#00C2A1] text-white rounded-full font-bold hover:bg-[#00AF91] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1 active:scale-95 text-lg"
+    >
+      Aplica
+    </a>
 
-  <p className="text-white/80 mt-4 flex items-center text-lg">
-    <span className="w-3 h-3 bg-[#00C2A1] rounded-full mr-3 animate-pulse"></span>
-    Únete a 500+ builders construyendo el futuro
-  </p>
-
-  <p className="text-white/80 mt-4 text-sm">
-    ¿Prefieres unirte directo al grupo de WhatsApp? <br />
-    👉{" "}
     <a
       href="https://chat.whatsapp.com/DEVGEWw3S7ILIzgL3yc9YC"
       target="_blank"
-      rel="noopener noreferrer"
-      className="underline text-[#00C2A1] font-bold"
+      className="flex-1 text-center px-6 py-5 bg-white/10 backdrop-blur-md border-2 border-white/20 text-white rounded-full font-bold hover:border-[#00C2A1] hover:bg-white/20 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 hover:-translate-y-1 active:scale-95 text-lg"
     >
-      Únete aquí
+      Ùnete
     </a>
+  </div>
+
+  <p className="text-white/80 mt-4 flex items-center justify-center text-lg">
+    <span className="w-3 h-3 bg-[#00C2A1] rounded-full mr-3 animate-pulse"></span>
+    Únete a 500+ builders construyendo el futuro
   </p>
 </div>
 
 
 
+
+
               {/* Enhanced CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up animate-delay-500">
+              {/* <div className="flex flex-col sm:flex-row gap-6 animate-fade-in-up animate-delay-500">
                 <Link
                   href="/bootcamps"
                   className="group inline-flex items-center justify-center px-10 py-5 bg-[#00C2A1] text-white rounded-full font-bold hover:bg-[#00AF91] transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:scale-105 hover:-translate-y-2 text-lg"
@@ -360,7 +339,7 @@ export default function HomePage() {
                   <Users className="mr-3 w-6 h-6 group-hover:scale-110 transition-transform duration-300" />
                   Comunidad
                 </Link>
-              </div>
+              </div> */}
             </div>
 
             {/* Right Sidebar - Enhanced Cards */}

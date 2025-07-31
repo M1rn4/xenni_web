@@ -78,7 +78,7 @@ export default function AplicarPage() {
                 <li>Certificación oficial y NFT verificable</li>
                 <li>Acceso a comunidad, premios y difusión</li>
                 <li>Sin proceso de selección</li>
-                <li className="font-semibold text-green-700">📌 Recuperas el 25% si te gradúas</li>
+                <li className="font-semibold text-green-700">📌 Recuperas el 50% si te gradúas</li>
               </ul>
               <a href="https://xenni.academy/pago-directo" target="_blank" rel="noopener noreferrer" className="bg-red-500 hover:bg-red-600 transition text-white px-4 py-2 rounded-md inline-block">
                 🔓 ¡Inscribirme ahora!

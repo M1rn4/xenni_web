@@ -52,7 +52,7 @@ export default function Web3BootcampPage() {
     certificate: "NFT + Diploma PDF",
     price: "100 usd",
     includes: [
-      "Recupara el 25% de tu inversion si te gradùas",
+      "Recupara el 50% de tu inversion si te gradùas",
       "Gana premios",
       "Mentoría personalizada",
       "Acceso a comunidad Web3",

@@ -84,10 +84,10 @@ export default function HomePage() {
   ]
 
   const stats = [
-  { number: "2025", label: "Año de lanzamiento" },
-  { number: "100+", label: "Personas en lista de espera" },
-  { number: "12", label: "Mentores confirmados para el inicio" },
-  { number: "1", label: "Misión: democratizar el acceso a educación tecnológica en LATAM" },
+  { number: "100+", label: "Alumnos registrados" },
+  { number: "10+", label: "Mentores expertos en tecnologías disruptivas" },
+  { number: "1", label: "Objetivo: democratizar el acceso a educación tecnológica en LATAM" },
+
 ]
 
 

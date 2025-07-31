@@ -92,7 +92,6 @@ export default function AplicarPage() {
             <div className="border-2 border-yellow-500 p-6 rounded-xl shadow-xl bg-yellow-50 hover:shadow-2xl transition">
               <h2 className="text-2xl font-semibold text-yellow-600 mb-4">🚀 Aplicar a Beca</h2>
               <p className="text-lg font-bold mb-2">$10 USD</p>
-              <p className="text-sm text-gray-600 mb-2">(Contribución reembolsable si no eres seleccionado)</p>
               <ul className="text-left text-gray-700 list-disc list-inside space-y-1 mb-4">
                 <li>Cupos limitados</li>
                 <li>Proceso de postulación con revisión</li>

@@ -84,7 +84,7 @@ export default function AplicarPage() {
                 <li>Sin proceso de selección</li>
                 <li className="font-semibold text-green-700">📌 Recuperas el 50% si te gradúas</li>
               </ul>
-              <a href="https://xenni.academy/pago-directo" target="_blank" rel="noopener noreferrer" className="bg-red-500 hover:bg-red-600 transition text-white px-4 py-2 rounded-md inline-block">
+              <a href=" https://tally.so/r/31oaQ1" target="_blank" rel="noopener noreferrer" className="bg-red-500 hover:bg-red-600 transition text-white px-4 py-2 rounded-md inline-block">
                 🔓 ¡Inscribirme ahora!
               </a>
             </div>
@@ -100,7 +100,7 @@ export default function AplicarPage() {
                 <li>Postulaciones destacadas serán difundidas</li>
                 <li className="font-semibold text-green-700">📌 Si te gradúas, ¡recibes un bonus sorpresa!</li>
               </ul>
-              <a href="https://xenni.academy/beca" target="_blank" rel="noopener noreferrer" className="bg-yellow-500 hover:bg-yellow-600 transition text-white px-4 py-2 rounded-md inline-block">
+              <a href="https://tally.so/r/n0RWlP" target="_blank" rel="noopener noreferrer" className="bg-yellow-500 hover:bg-yellow-600 transition text-white px-4 py-2 rounded-md inline-block">
                 ✍️ Aplicar a beca
               </a>
             </div>

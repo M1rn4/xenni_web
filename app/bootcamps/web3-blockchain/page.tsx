@@ -426,6 +426,12 @@ export default function Web3BootcampPage() {
     photo: "/instructor/mirna.png",
     description: "Ingeniera mecatrónica, fundadora de Xenni y educadora apasionada por la tecnología con impacto social. Ha enseñado Web3 y representado proyectos en hackatones globales.",
     },
+        {
+    name: "Mauro Ojeda",
+    role: "Blockchain and Data Expert ",
+    photo: "/instructor/mauro.jpeg",
+    description: "Ingeniero y educador apasionado por el desarrollo de prototipos que transformen ideas en soluciones reales.",
+    },
   ];
   const partners = [
     {

@@ -95,7 +95,7 @@ export default function HomePage() {
     {
       date: "Setiembre 15, 2025",
       title: "Xenni Bootcamp: Web3 & Blockchain Intensivo",
-      description: "6 semanas construyendo el futuro descentralizado",
+      description: "8 semanas construyendo el futuro descentralizado",
       status: "Inscripciones abiertas",
       statusLink: "/bootcamps/web3-blockchain",
       color: "bg-emerald-500",
@@ -289,7 +289,7 @@ export default function HomePage() {
               <p className="text-xl md:text-2xl text-white/90 mb-12 max-w-2xl leading-relaxed font-light animate-fade-in-up animate-delay-300">
                 <span className="transition-all duration-1000">{stages[currentStage].description}</span>
                 <br />
-                <span className="font-semibold text-[#00C2A1]">Co-aprende y co-construye en 6 semanas intensivas</span>
+                <span className="font-semibold text-[#00C2A1]">Co-aprende y co-construye en 8 semanas intensivas</span>
               </p>
 
               {/* Email Subscription with Enhanced Styling */}

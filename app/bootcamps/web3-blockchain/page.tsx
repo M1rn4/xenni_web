@@ -269,7 +269,7 @@ export default function Web3BootcampPage() {
       resources: ["Token standards", "Ejemplos de tokenomics", "Herramientas de análisis"]
     },
     {
-      title: "Finanzas desce",
+      title: "Finanzas descentralizadas",
       icon: Brain,
       iconBg: "bg-blue-800",
       description: "Introducción a la arquitectura de Ethereum y los fundamentos de los contratos inteligentes.",
@@ -427,6 +427,12 @@ export default function Web3BootcampPage() {
     description: "Ingeniera mecatrónica, fundadora de Xenni y educadora apasionada por la tecnología con impacto social. Ha enseñado Web3 y representado proyectos en hackatones globales.",
     },
         {
+    name: "Pia Rivas",
+    role: "Magíster en Blockchain, Cripto y Aplicaciones Empresariales ",
+    photo: "/instructor/pia.png",
+    description: "Magíster en Blockchain, Cripto y Aplicaciones Empresariales (Universidad Politécnica de Catalunya). Bachiller en Finanzas (Universidad del Pacífico). Analista de Inversiones en Salkantay Ventures. Host del pódcast Dentro del Bloque.",
+    },
+        {
     name: "Mauro Ojeda",
     role: "Blockchain and Data Expert ",
     photo: "/instructor/mauro.jpeg",
@@ -492,11 +498,17 @@ export default function Web3BootcampPage() {
                   Aplicar al bootcamp
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
                 </Link>
-                <button className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center group hover:scale-105">
+
+                <a
+                  href="/SIllabus - Bootcamp web3 y blockchain.pdf"
+                  download="Syllabus - Bootcamp Web3 y Blockchain.pdf"
+                  className="btn-secondary text-lg px-8 py-4 inline-flex items-center justify-center group hover:scale-105"
+                >
                   <Download className="mr-2 w-5 h-5" />
                   Descargar syllabus
-                </button>
+                </a>
               </div>
+
             </div>
 
             <div className="relative hidden md:block">
@@ -726,11 +738,16 @@ export default function Web3BootcampPage() {
 
               {/* Download Button */}
               <div className="mt-16 text-center">
-                <button className="btn-primary text-lg px-8 py-4 inline-flex items-center group hover:scale-105">
+                <a
+                  href="/SIllabus - Bootcamp web3 y blockchain.pdf"
+                  download="Syllabus - Bootcamp Web3 y Blockchain.pdf"
+                  className="btn-primary text-lg px-8 py-4 inline-flex items-center group hover:scale-105"
+                >
                   <Download className="mr-2 w-5 h-5" />
                   Descargar syllabus completo en PDF
-                </button>
+                </a>
               </div>
+
             </div>
           </section>
 

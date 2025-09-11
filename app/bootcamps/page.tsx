@@ -1,8 +1,10 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Clock, Users, Award, ArrowRight, Filter, X, Mail, Bell } from "lucide-react"
+import { MarketingBootcampService } from "@/lib/services/bootcamp-service"
+import { MarketingBootcamp } from "@/lib/types/bootcamp"
 
 export default function BootcampsPage() {
   const [selectedBootcamp, setSelectedBootcamp] = useState(null)
@@ -10,74 +12,35 @@ export default function BootcampsPage() {
   const [preRegisterData, setPreRegisterData] = useState({ name: "", email: "", bootcamp: "" })
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitSuccess, setSubmitSuccess] = useState(false)
+  const [bootcamps, setBootcamps] = useState<MarketingBootcamp[]>([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState<string | null>(null)
 
-  const bootcamps = [
-    {
-      id: "web3-blockchain",
-      title: "Blockchain Builder Bootcamp",
-      description: "El bootcamp Web3 donde construyes, creces y ganas dinero",
-      duration: "8 semanas",
-      level: "Principiante",
-      students: 10000,
-      nextStart: "15 Set 2025",
-      technologies: [
-      "Solidity",
-      "ThirdWeb",
-      "React",
-      "IA para developers",
-      "MetaMask",
-    ],
-      color: "from-purple-500 to-pink-500",
-      icon: "🔗",
-      available: true,
-    },
-    {
-      id: "ai-machine-learning",
-      title: "Inteligencia Artificial & ML",
-      description: "Desarrolla modelos de IA y sistemas inteligentes desde cero",
-      duration: "20 semanas",
-      level: "Avanzado",
-      students: 0,
-      nextStart: "Próximamente",
-      estimatedStart: "Q2 2024",
-      technologies: ["Python", "TensorFlow", "PyTorch", "OpenAI"],
-      color: "from-blue-500 to-cyan-500",
-      icon: "🧠",
-      available: false,
-    },
-    {
-      id: "iot-embedded",
-      title: "Internet of Things & Embedded",
-      description: "Conecta el mundo físico con soluciones IoT innovadoras",
-      duration: "14 semanas",
-      level: "Intermedio",
-      students: 0,
-      nextStart: "Próximamente",
-      estimatedStart: "Q3 2024",
-      technologies: ["Arduino", "Raspberry Pi", "C++", "MQTT"],
-      color: "from-green-500 to-emerald-500",
-      icon: "📡",
-      available: false,
-    },
-    {
-      id: "cybersecurity",
-      title: "Ciberseguridad Avanzada",
-      description: "Protege sistemas y datos con técnicas de seguridad de vanguardia",
-      duration: "18 semanas",
-      level: "Avanzado",
-      students: 0,
-      nextStart: "Próximamente",
-      estimatedStart: "Q4 2024",
-      technologies: ["Kali Linux", "Python", "Wireshark", "Metasploit"],
-      color: "from-red-500 to-orange-500",
-      icon: "🛡️",
-      available: false,
-    },
-  ]
+  // Load bootcamps from Firebase
+  useEffect(() => {
+    async function loadBootcamps() {
+      try {
+        setLoading(true)
+        setError(null)
+        const fetchedBootcamps = await MarketingBootcampService.getPublicBootcamps()
+        setBootcamps(fetchedBootcamps)
+      } catch (err) {
+        console.error('Error loading bootcamps:', err)
+        setError('Error al cargar los bootcamps. Mostrando datos por defecto.')
+        // Fallback data will be loaded automatically by the service
+        const fallbackBootcamps = await MarketingBootcampService.getPublicBootcamps()
+        setBootcamps(fallbackBootcamps)
+      } finally {
+        setLoading(false)
+      }
+    }
 
-  const levels = ["Todos", "Principiante", "Intermedio", "Avanzado"]
+    loadBootcamps()
+  }, [])
 
-  const handlePreRegister = (bootcamp: { id: string; title: string; description: string; duration: string; level: string; students: number; nextStart: string; technologies: string[]; color: string; icon: string; available: boolean; estimatedStart?: undefined } | { id: string; title: string; description: string; duration: string; level: string; students: number; nextStart: string; estimatedStart: string; technologies: string[]; color: string; icon: string; available: boolean }) => {
+  const levels = ["Todos", "Básico", "Intermedio", "Avanzado"]
+
+  const handlePreRegister = (bootcamp: MarketingBootcamp) => {
     setPreRegisterData({ ...preRegisterData, bootcamp: bootcamp.title })
     setPreRegisterModal(true)
   }
@@ -148,9 +111,34 @@ export default function BootcampsPage() {
       {/* Bootcamps Grid */}
       <section className="py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-8">
-            {bootcamps.map((bootcamp) => (
-              <div key={bootcamp.id} className={`group ${bootcamp.available ? "hover-lift" : ""}`}>
+          {/* Loading State */}
+          {loading && (
+            <div className="flex justify-center items-center py-16">
+              <div className="flex items-center space-x-3">
+                <div className="w-6 h-6 border-2 border-[#00C2A1] border-t-transparent rounded-full animate-spin"></div>
+                <span className="text-neutral-600 font-medium">Cargando bootcamps...</span>
+              </div>
+            </div>
+          )}
+
+          {/* Error State */}
+          {error && (
+            <div className="bg-yellow-50 border border-yellow-200 rounded-xl p-6 mb-8">
+              <div className="flex items-start space-x-3">
+                <span className="text-2xl">⚠️</span>
+                <div>
+                  <h3 className="font-semibold text-yellow-800 mb-1">Aviso</h3>
+                  <p className="text-yellow-700">{error}</p>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Bootcamps Grid */}
+          {!loading && (
+            <div className="grid md:grid-cols-2 gap-8">
+              {bootcamps.map((bootcamp) => (
+                <div key={bootcamp.id} className={`group ${bootcamp.available ? "hover-lift" : ""}`}>
                 <div
                   className={`bg-white rounded-2xl overflow-hidden shadow-lg transition-all duration-300 border border-neutral-200 relative ${
                     bootcamp.available ? "hover:shadow-xl hover:border-[#00C2A1]/30" : "opacity-75"
@@ -273,9 +261,10 @@ export default function BootcampsPage() {
                     </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

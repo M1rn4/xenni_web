@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",
+    "@opentelemetry/api": "^1.9.0",
     "@radix-ui/react-accordion": "latest",
     "@radix-ui/react-alert-dialog": "latest",
     "@radix-ui/react-aspect-ratio": "latest",
@@ -48,6 +49,7 @@
     "date-fns": "4.1.0",
     "dotenv": "^17.2.0",
     "embla-carousel-react": "latest",
+    "firebase-admin": "^13.5.0",
     "input-otp": "latest",
     "lucide-react": "^0.454.0",
     "next": "15.2.4",

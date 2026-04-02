@@ -4,7 +4,6 @@ import { RegisterForm } from "@/modules/auth/components/RegisterForm";
 import { RequestPasswordRecovery } from "@/modules/auth/components/RequestPasswordRecovery";
 import { ResetPassword } from "@/modules/auth/components/ResetPassword";
 import { ProtectedRoute } from "@/core/routes/ProtectedRoute";
-import Home from "@/pages/Home";
 import HomeV2 from "@/pages/HomeV2";
 import Dashboard from "@/pages/Dashboard";
 import { Toaster } from "react-hot-toast";
@@ -17,7 +16,6 @@ function App() {
       <Toaster position="top-right" />
       <Routes>
         <Route path="/" element={<HomeV2 />} />
-        <Route path="/version-1" element={<Home />} />
         <Route path="/version-2" element={<HomeV2 />} />
         <Route path="/login" element={<LoginForm />} />
         <Route path="/register" element={<RegisterForm />} />

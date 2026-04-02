@@ -1,13 +1,13 @@
-# xenny Frontend
+# xenni Frontend
 
-Frontend de `xenny`, enfocado hoy en una landing de captacion para presentar la propuesta del producto y convertir interesados hacia WhatsApp. El repo tambien conserva una base tecnica de autenticacion, dashboard protegido y modulo de eventos, pero esa parte todavia esta en estado de scaffolding y no representa el flujo principal actual del proyecto.
+Frontend de `xenni`, enfocado hoy en una landing de captacion para presentar la propuesta del producto y convertir interesados hacia WhatsApp. El repo tambien conserva una base tecnica de autenticacion, dashboard protegido y modulo de eventos, pero esa parte todavia esta en estado de scaffolding y no representa el flujo principal actual del proyecto.
 
 ## Objetivo actual del proyecto
 
 La prioridad visible del producto es la experiencia publica:
 
-- Mostrar la propuesta de valor de `xenny` como capa operativa con equipos de agentes AI.
-- Validar mensajes de marketing mediante dos versiones de landing.
+- Mostrar la propuesta de valor de `xenni` como capa operativa con equipos de agentes AI.
+- Iterar y validar mensajes de marketing sobre la landing principal activa.
 - Llevar los CTA de demo/contacto a WhatsApp con mensajes precargados segun el contexto.
 
 La aplicacion no debe entenderse hoy como un SaaS completo ya cerrado, sino como una combinacion de:
@@ -22,7 +22,6 @@ La aplicacion no debe entenderse hoy como un SaaS completo ya cerrado, sino como
 | --- | --- | --- |
 | `/` | activa | Landing principal actual (`HomeV2`). |
 | `/version-2` | activa | Alias de la landing principal. |
-| `/version-1` | activa | Landing anterior, conservada como alternativa. |
 | `/login` | base tecnica | Formulario de login. |
 | `/register` | base tecnica | Formulario de registro. |
 | `/recover-password` | base tecnica | Solicitud de recuperacion de password. |
@@ -34,7 +33,6 @@ La aplicacion no debe entenderse hoy como un SaaS completo ya cerrado, sino como
 ### Lo que si esta alineado con el objetivo actual
 
 - Landing principal en `HomeV2`.
-- Landing alternativa en `Home`.
 - CTA conectados a WhatsApp.
 - Router ya configurado para separar experiencia publica y experiencia autenticada.
 
@@ -43,7 +41,6 @@ La aplicacion no debe entenderse hoy como un SaaS completo ya cerrado, sino como
 - El dashboard sigue siendo un placeholder.
 - El flujo de auth no esta listo como producto final.
 - `src/lib/supabaseClient.ts` esta mockeado/deshabilitado.
-- Hay inconsistencias de TypeScript en auth/http/events que impiden una build limpia del proyecto en su estado actual.
 
 ## Stack real del repo
 
@@ -66,7 +63,6 @@ Nota importante: aunque Tailwind esta instalado y se usa en auth/dashboard, las 
 src/
 ├── pages/
 │   ├── HomeV2.tsx           # Landing principal actual
-│   ├── Home.tsx             # Landing alternativa / version anterior
 │   └── Dashboard.tsx        # Dashboard base protegido
 ├── modules/
 │   ├── auth/                # Formularios, hooks, store y servicios de auth
@@ -120,12 +116,12 @@ Observaciones:
 
 ## Deploy en Vercel
 
-El repo ya incluye [vercel.json](/Users/cesar/Documents/General/Personal/Proyectos/xenny/frontend.base/vercel.json) con la configuracion necesaria para este proyecto:
+El repo ya incluye `vercel.json` con la configuracion necesaria para este proyecto:
 
 - `framework: vite`
 - `buildCommand: npm run build`
 - `outputDirectory: dist`
-- fallback de SPA a `index.html` para que rutas como `/version-1`, `/login` o `/dashboard` no rompan al refrescar
+- fallback de SPA a `index.html` para que rutas como `/version-2`, `/login` o `/dashboard` no rompan al refrescar
 
 En Vercel solo necesitas:
 
@@ -144,6 +140,8 @@ Con la build actual, el proyecto compila correctamente para produccion.
 | `npm run type-check` | Ejecuta chequeo de TypeScript sin emitir archivos. |
 | `npm run lint` | Ejecuta ESLint. |
 | `npm run test` | Corre Vitest. |
+| `npm run test:watch` | Ejecuta Vitest en modo watch. |
+| `npm run test:coverage` | Ejecuta tests con reporte de cobertura. |
 | `npm run preview` | Sirve la build localmente. |
 
 ## Recomendaciones para seguir el proyecto
@@ -151,19 +149,15 @@ Con la build actual, el proyecto compila correctamente para produccion.
 Si el foco sigue siendo marketing y conversion:
 
 - iterar `HomeV2` como landing principal,
-- usar `Home` solo como referencia o experimento,
 - mantener los CTAs conectados a WhatsApp y medir conversion.
 
 Si el foco vuelve a ser producto autenticado:
 
-- corregir los tipos rotos en auth/http/events,
+- reforzar tipado y cobertura de casos en auth/http/events,
 - definir un proveedor real de autenticacion,
 - alinear store, servicios y `apiClient`,
 - convertir el dashboard en una experiencia real de producto.
 
 ## Nota sobre documentacion interna
 
-El archivo `AGENT.md` sigue siendo la referencia de trabajo para agentes/automatizaciones dentro del repo, pero este `README.md` ahora describe el estado real del proyecto y su objetivo actual.
-# www.xenny.xyz
-# www.xenny.xyz
-# www.xenny.xyz
+El archivo `AGENT.md` sigue siendo la referencia de trabajo para agentes/automatizaciones dentro del repo, pero este `README.md` describe el estado funcional del proyecto para desarrollo y despliegue.

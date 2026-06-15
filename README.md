@@ -1,4 +1,4 @@
-# xenni Frontend
+# xenni Frontend  zz
 
 Frontend de `xenni`, enfocado hoy en una landing de captacion para presentar la propuesta del producto y convertir interesados hacia WhatsApp. El repo tambien conserva una base tecnica de autenticacion, dashboard protegido y modulo de eventos, pero esa parte todavia esta en estado de scaffolding y no representa el flujo principal actual del proyecto.
 

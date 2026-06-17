@@ -391,7 +391,7 @@
   transition: color 0.08s ease;
 }
 
-/* Scrambling characters — xenni "computing" in lime */
+/* Scrambling characters — brand "computing" in lime */
 .v2-char--scramble {
   color: var(--v2-lime);
   text-shadow: 0 0 16px rgba(197, 241, 53, 0.55);
@@ -412,8 +412,8 @@
   top: -0.04em;
 }
 
-/* xenni authorship tag */
-.v2-xenni-tag {
+/* Brand authorship tag */
+.v2-brand-tag {
   position: absolute;
   bottom: calc(100% + 10px);
   left: 50%;
@@ -444,7 +444,7 @@
 }
 
 /* Small caret pointing down toward the cursor */
-.v2-xenni-tag::after {
+.v2-brand-tag::after {
   content: "";
   position: absolute;
   top: 100%;
@@ -456,11 +456,11 @@
   filter: drop-shadow(0 1px 0 rgba(17, 17, 17, 0.08));
 }
 
-.v2-xenni-tag--fade {
+.v2-brand-tag--fade {
   animation: v2TagOut 0.45s ease forwards;
 }
 
-.v2-xenni-tag-dot {
+.v2-brand-tag-dot {
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -472,7 +472,7 @@
 }
 
 /* fast pulse while actively writing */
-.v2-xenni-tag-dot--active {
+.v2-brand-tag-dot--active {
   animation: v2Pulse 0.7s ease-in-out infinite;
 }
 
@@ -726,7 +726,7 @@
   margin-top: 5px;
 }
 
-/* ── What xenni is ───────────────────────────────── */
+/* ── What buildara agency is ─────────────────────── */
 
 .v2-what {
   padding: var(--v2-section-pad) 0;
@@ -810,7 +810,7 @@
   border: 1px solid rgba(17, 17, 17, 0.1);
 }
 
-.v2-layer-box--xenni {
+.v2-layer-box--agency {
   background: var(--v2-lime);
   border: 1px solid var(--v2-lime-border);
   box-shadow: 0 8px 32px rgba(197, 241, 53, 0.28);
@@ -855,7 +855,7 @@
   font-weight: 700;
 }
 
-.v2-layer-box--xenni .v2-layer-title {
+.v2-layer-box--agency .v2-layer-title {
   font-size: 14px;
   color: #1a2200;
 }
@@ -867,7 +867,7 @@
   line-height: 1.5;
 }
 
-.v2-layer-box--xenni .v2-layer-sub { color: #3a4a00; }
+.v2-layer-box--agency .v2-layer-sub { color: #3a4a00; }
 
 .v2-layer-connector {
   display: flex;

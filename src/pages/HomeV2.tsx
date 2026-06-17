@@ -55,7 +55,7 @@ function useScrambleBuild(text: string) {
     setChars([]);
     setBuildState("idle");
 
-    const ANNOUNCE_DELAY = 400;  // tag appears first — user reads "xenni."
+    const ANNOUNCE_DELAY = 400;  // tag appears first — user reads "buildara agency."
     const START_DELAY    = 1400; // writing starts after the pause
     const STAGGER        = 80;   // ms between each character (readable pace)
     const FRAMES         = 3;    // minimal scramble — less chaos, more intent
@@ -122,14 +122,14 @@ function LayerDiagram({ lang }: { lang: "en" | "es" }) {
   const labels = {
     en: {
       top: { title: "YOUR TEAM", sub: "Reviews · Approves · Steers" },
-      mid: { title: "xenni EXECUTION LAYER", sub: "Sales Ops · Content · Data · Ops" },
+      mid: { title: "buildara agency EXECUTION LAYER", sub: "Sales Ops · Content · Data · Ops" },
       bot: { title: "YOUR TOOLS & PIPELINE", sub: "CRM · Calendar · Channels · Data" },
       a1: "oversight",
       a2: "operates on",
     },
     es: {
       top: { title: "TU EQUIPO", sub: "Revisa · Aprueba · Dirige" },
-      mid: { title: "CAPA DE EJECUCIÓN xenni", sub: "Sales Ops · Contenido · Data · Ops" },
+      mid: { title: "CAPA DE EJECUCIÓN buildara agency", sub: "Sales Ops · Contenido · Data · Ops" },
       bot: { title: "TUS HERRAMIENTAS", sub: "CRM · Calendario · Canales · Data" },
       a1: "supervisión",
       a2: "opera sobre",
@@ -147,7 +147,7 @@ function LayerDiagram({ lang }: { lang: "en" | "es" }) {
         <span className="v2-connector-label">{l.a1}</span>
         <div className="v2-connector-arrow" />
       </div>
-      <div className="v2-layer-box v2-layer-box--xenni">
+      <div className="v2-layer-box v2-layer-box--agency">
         <div className="v2-layer-badge">
           <span className="v2-layer-live-dot" />
           {lang === "en" ? "Active" : "Activo"}
@@ -172,10 +172,10 @@ function LayerDiagram({ lang }: { lang: "en" | "es" }) {
 
 const copy = {
   en: {
-    brand: "xenni.",
+    brand: "buildara agency.",
     heroTitle: ["Small team.", "Heavy pipeline."],
     heroSub:
-      "xenni gives lean B2B teams an AI execution layer for sales ops, content, and growth workflows — so they can run more pipeline, follow up faster, and ship more without hiring headcount too early.",
+      "buildara agency gives lean B2B teams an AI execution layer for sales ops, content, and growth workflows — so they can run more pipeline, follow up faster, and ship more without hiring headcount too early.",
     heroCta: "Book a demo",
     heroNote: "30 min · with a real human · no commitment",
     cardLabel: "AI Execution Layer",
@@ -189,17 +189,17 @@ const copy = {
       "Humans approve, steer, and step in where judgment matters",
     ],
 
-    whatKicker: "What xenni actually is",
+    whatKicker: "What buildara agency actually is",
     whatHeading1: "Not another AI assistant.",
     whatHeading2: "An execution layer for your growth operation.",
     whatP1:
       "Most startups do not fail because they lack ideas. They stall because a small team cannot keep execution consistent across pipeline, content, reporting, and day-to-day ops.",
     whatP2:
-      "xenni deploys specialized AI teams that work as one unit inside your operation. They do the repetitive work, keep workflows moving, and expand your execution capacity without adding unnecessary friction.",
+      "buildara agency deploys specialized AI teams that work as one unit inside your operation. They do the repetitive work, keep workflows moving, and expand your execution capacity without adding unnecessary friction.",
 
     whoKicker: "Built for lean B2B teams",
     whoTitle:
-      "xenni is for companies that already have traction, but whose team is still too small for the operational load.",
+      "buildara agency is for companies that already have traction, but whose team is still too small for the operational load.",
     whoItems: [
       "Founder-led sales teams",
       "Lean revenue teams",
@@ -219,8 +219,8 @@ const copy = {
     painClose1: "The problem is not strategy.",
     painClose2: "The problem is operational drag.",
 
-    promiseKicker: "What changes with xenni",
-    promiseTitle: "With xenni, the team stays lean — but the operation does not.",
+    promiseKicker: "What changes with buildara agency",
+    promiseTitle: "With buildara agency, the team stays lean — but the operation does not.",
     promiseItems: [
       "More follow-through across your pipeline",
       "Faster execution across sales ops and content ops",
@@ -240,7 +240,7 @@ const copy = {
       {
         n: "02",
         title: "We deploy AI execution teams",
-        body: "xenni activates specialized agents across sales ops, content, and repetitive operational work.",
+        body: "buildara agency activates specialized agents across sales ops, content, and repetitive operational work.",
       },
       {
         n: "03",
@@ -274,7 +274,7 @@ const copy = {
     whyP1:
       "Most growing teams wait too long to fix operational drag. They keep adding tools, pile more work onto a small team, and lose consistency right when execution matters most.",
     whyP2:
-      "xenni helps you add capacity before operational chaos forces a larger headcount decision.",
+      "buildara agency helps you add capacity before operational chaos forces a larger headcount decision.",
 
     ctaTitle: "Run a heavier operation without building a heavier team.",
     ctaButton: "Book a demo",
@@ -284,10 +284,10 @@ const copy = {
     navCta: "Book a demo",
   },
   es: {
-    brand: "xenni.",
+    brand: "buildara agency.",
     heroTitle: ["Escalas.", "Sin escalar el equipo."],
     heroSub:
-      "xenni le da a equipos B2B pequeños una capa de ejecución con IA para sales ops, contenido y crecimiento — para mover más pipeline, responder más rápido y producir más, sin contratar gente antes de tiempo.",
+      "buildara agency le da a equipos B2B pequeños una capa de ejecución con IA para sales ops, contenido y crecimiento — para mover más pipeline, responder más rápido y producir más, sin contratar gente antes de tiempo.",
     heroCta: "Agenda una demo",
     heroNote: "30 min · con un humano real · sin compromiso",
     cardLabel: "Equipos de ejecución IA",
@@ -301,17 +301,17 @@ const copy = {
       "Los humanos aprueban, redirigen e intervienen cuando hay criterio de por medio",
     ],
 
-    whatKicker: "Qué es xenni en realidad",
+    whatKicker: "Qué es buildara agency en realidad",
     whatHeading1: "No es otro asistente de IA.",
     whatHeading2: "Es la capa de ejecución que tu operación necesita.",
     whatP1:
       "La mayoría de las startups no fracasan por falta de ideas. Se traban porque un equipo chico no puede mantener la ejecución consistente en pipeline, contenido, reportes y operación del día a día.",
     whatP2:
-      "xenni despliega equipos de IA especializados que trabajan como una sola unidad dentro de tu operación. Se encargan del trabajo repetitivo, mantienen los flujos en movimiento y amplían tu capacidad sin agregar fricción.",
+      "buildara agency despliega equipos de IA especializados que trabajan como una sola unidad dentro de tu operación. Se encargan del trabajo repetitivo, mantienen los flujos en movimiento y amplían tu capacidad sin agregar fricción.",
 
     whoKicker: "Para equipos B2B que ya tienen tracción",
     whoTitle:
-      "xenni es para empresas que ya están creciendo, pero cuyo equipo todavía es demasiado chico para la carga operativa.",
+      "buildara agency es para empresas que ya están creciendo, pero cuyo equipo todavía es demasiado chico para la carga operativa.",
     whoItems: [
       "Equipos de ventas liderados por el founder",
       "Equipos de revenue pequeños",
@@ -331,8 +331,8 @@ const copy = {
     painClose1: "El problema no es la estrategia.",
     painClose2: "El problema es la operación.",
 
-    promiseKicker: "Qué cambia con xenni",
-    promiseTitle: "Con xenni, el equipo sigue siendo chico — pero la operación no lo parece.",
+    promiseKicker: "Qué cambia con buildara agency",
+    promiseTitle: "Con buildara agency, el equipo sigue siendo chico — pero la operación no lo parece.",
     promiseItems: [
       "Más seguimiento real en tu pipeline",
       "Ejecución más rápida en ventas y contenido",
@@ -352,7 +352,7 @@ const copy = {
       {
         n: "02",
         title: "Activamos los equipos de IA",
-        body: "xenni pone a trabajar agentes especializados en sales ops, contenido y operación repetitiva.",
+        body: "buildara agency pone a trabajar agentes especializados en sales ops, contenido y operación repetitiva.",
       },
       {
         n: "03",
@@ -386,7 +386,7 @@ const copy = {
     whyP1:
       "La mayoría de los equipos en crecimiento esperan demasiado para atacar el problema operativo. Siguen sumando herramientas, le apilan más trabajo a un equipo chico y pierden consistencia justo cuando más importa ejecutar.",
     whyP2:
-      "xenni te ayuda a sumar capacidad antes de que el caos te fuerce a contratar más gente de la que necesitas.",
+      "buildara agency te ayuda a sumar capacidad antes de que el caos te fuerce a contratar más gente de la que necesitas.",
 
     ctaTitle: "Opera a mayor escala sin crecer el equipo.",
     ctaButton: "Agenda una demo",
@@ -465,8 +465,8 @@ export default function HomeV2() {
 
   const demoLink = createWhatsAppUrl(
     lang === "en"
-      ? "Hi xenni, I want to book a demo for my company. I came from the homepage and want to see how your AI teams could support our operation."
-      : "Hola xenni, quiero agendar una demo para mi empresa. Vengo desde la home y quiero ver cómo sus equipos AI podrían apoyar nuestra operación."
+      ? "Hi buildara agency, I want to book a demo for my company. I came from the homepage and want to see how your AI teams could support our operation."
+      : "Hola buildara agency, quiero agendar una demo para mi empresa. Vengo desde la home y quiero ver cómo sus equipos AI podrían apoyar nuestra operación."
   );
 
   const modalCopy = {
@@ -511,7 +511,7 @@ export default function HomeV2() {
 
       {/* ── Unified top nav ───────────────────────────────────────── */}
       <header className={`v2-top-nav${navScrolled ? " v2-top-nav--scrolled" : ""}`}>
-        <span className="v2-brand">xenni.</span>
+        <span className="v2-brand">{t.brand}</span>
 
         <nav className="v2-top-nav-links" aria-label="Site navigation">
           <a href="#how" className="v2-top-nav-link">{t.navHow}</a>
@@ -551,9 +551,9 @@ export default function HomeV2() {
                 ))}
                 <span className="v2-cursor-wrap" aria-hidden="true">
                   {tagVisible && (
-                    <span className={`v2-xenni-tag${tagFading ? " v2-xenni-tag--fade" : ""}`}>
-                      <span className={`v2-xenni-tag-dot${buildState === "building" ? " v2-xenni-tag-dot--active" : ""}`} />
-                      xenni.
+                    <span className={`v2-brand-tag${tagFading ? " v2-brand-tag--fade" : ""}`}>
+                      <span className={`v2-brand-tag-dot${buildState === "building" ? " v2-brand-tag-dot--active" : ""}`} />
+                      buildara agency.
                     </span>
                   )}
                   <span
@@ -627,7 +627,7 @@ export default function HomeV2() {
         </div>
       </section>
 
-      {/* ── What xenni actually is ────────────────────────────────── */}
+      {/* ── What buildara agency actually is ──────────────────────── */}
       <section className="v2-what">
         <div className="v2-section-wrap">
           <p className="v2-section-kicker v2-animate">{t.whatKicker}</p>
@@ -840,13 +840,13 @@ export default function HomeV2() {
                 <span>{modalCopy.rush}</span>
                 <strong>{modalCopy.rushCta}</strong>
               </a>
-              <a href="mailto:contact@xenni.xyz" className="v2-contact-option v2-contact-option--mail">
+              <a href="mailto:contact@buildara.agency" className="v2-contact-option v2-contact-option--mail">
                 <span>{modalCopy.classic}</span>
                 <strong>{modalCopy.classicCta}</strong>
               </a>
             </div>
             <p className="v2-contact-email">
-              {modalCopy.emailLabel} <a href="mailto:contact@xenni.xyz">contact@xenni.xyz</a>
+              {modalCopy.emailLabel} <a href="mailto:contact@buildara.agency">contact@buildara.agency</a>
             </p>
           </div>
         </div>
